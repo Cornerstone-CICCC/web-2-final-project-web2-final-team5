@@ -1,0 +1,101 @@
+---
+import ServiceImage1 from "../assets/servicesPage/img-service1.png";
+import ServiceImage2 from "../assets/servicesPage/img-service2.png";
+import ServiceImage3 from "../assets/servicesPage/img-service3.jpeg";
+import ServiceImage4 from "../assets/servicesPage/img-service4.jpeg";
+import ServiceImage5 from "../assets/servicesPage/img-service5.jpeg";
+import ServiceImage6 from "../assets/servicesPage/img-service6.jpeg";
+---
+
+<section>
+  <div class="section-header">
+    <h2>Our Services</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="section-contents">
+    <ul>
+      <li>
+        <div>
+          <img src={ServiceImage1.src} alt="Service type image" />
+          <p>Engine services</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src={ServiceImage2.src} alt="Service type image" />
+          <p>Air conditioning</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src={ServiceImage3.src} alt="Service type image" />
+          <p>Engine services</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src={ServiceImage4.src} alt="Service type image" />
+          <p>Engine management</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src={ServiceImage5.src} alt="Service type image" />
+          <p>Steering</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src={ServiceImage6.src} alt="Service type image" />
+          <p>Wheel</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 112px 64px;
+  }
+  .section-header {
+    text-align: center;
+    h2 {
+      font-size: 48px;
+      line-height: 57px;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+  .section-contents {
+    ul {
+      /* display: flex;
+      flex-wrap: wrap; */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      /* li {
+        width: 33.33%;
+      } */
+      img {
+        max-width: 100%;
+        width: auto;
+      }
+    }
+    div {
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      p {
+        position: absolute;
+        color: #fff;
+        font-size: 24px;
+        left: 10px;
+        bottom: 20px;
+      }
+    }
+  }
+</style>

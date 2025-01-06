@@ -92,6 +92,10 @@ hr {
   display: none;
 }
 
+ul, ol, li {
+  list-style: none;
+}
+
 .a11y-hidden {
   position: absolute;
   width: 1px;

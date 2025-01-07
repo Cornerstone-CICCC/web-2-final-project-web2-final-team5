@@ -109,7 +109,7 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     .menu {
       gap: 24px;
     }
-    .social {
+    .socials ul {
       gap: 12px;
     }
     a {
@@ -139,6 +139,21 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     a {
       color: #000;
       text-decoration: underline;
+    }
+  }
+  @media (max-width: 768px) {
+    footer {
+      padding: 48px 24px;
+    }
+    .footer-top,
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
+    .footer-top .menu {
+      width: 100%;
+      justify-content: space-between;
     }
   }
 </style>

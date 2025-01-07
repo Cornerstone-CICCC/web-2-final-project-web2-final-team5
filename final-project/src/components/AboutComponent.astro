@@ -1,7 +1,8 @@
 ---
 import CarImg from "../assets/about-images/about-car-1.png"
 import Arrow from "../assets/about-images/gt-arrow.svg"
-import Thumnail from "../assets/about-images/about-thumnail.png"
+import Thumbnail from "../assets/about-images/about-thumbnail.png"
+import SampleVideo from "../assets/about-images/sample-video.mp4"
 ---
 
     <main>
@@ -34,7 +35,10 @@ import Thumnail from "../assets/about-images/about-thumnail.png"
                 </div>
             </div>
             <div class="right">
-                <img src={Thumnail.src} alt="sample-video" class="car">
+                <video controls poster={Thumbnail.src}>
+                    <source src={SampleVideo} type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
         <div class="bottom-half">
@@ -142,11 +146,14 @@ import Thumnail from "../assets/about-images/about-thumnail.png"
         line-height: 1.5;
     }
 
+    video {
+        width: 550px;
+    }
+
     @media screen and (max-width:769px) {
         .top-half {
             flex-direction: column;
             height: 100%;
-            padding-bottom: 10vw;
         }
 
         .bottom-half {
@@ -170,6 +177,12 @@ import Thumnail from "../assets/about-images/about-thumnail.png"
 
         .heading-container h2{
             text-align: left;
+        }
+
+        video {
+            width: 70vw;
+            min-width: 330px;
+            margin: 2rem 0;
         }
     }
 </style>

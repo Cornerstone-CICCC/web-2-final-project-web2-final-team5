@@ -1,54 +1,58 @@
 ---
 import CarImg from "../assets/about-images/about-car-1.png"
 import Arrow from "../assets/about-images/gt-arrow.svg"
-import Thumnail from "../assets/about-images/about-thumnail.png"
+import Thumbnail from "../assets/about-images/about-thumbnail.png"
+import SampleVideo from "../assets/about-images/sample-video.mp4"
 ---
 
-    <main>
-        <div class="top-half">
-            <div class="left">
-                <div class="heading-container">
-                    <h2>About Us</h2>
+<main>
+    <div class="top-half">
+        <div class="left">
+            <div class="heading-container">
+                <h2>About Us</h2>
+            </div>
+            <div class="small-headings">
+                <div class="mission">
+                    <h4>Our Mission</h4>
+                    <p>At Ddsgnr Auto Repair, our mission is to provide our customers with the highest level of car care and customer service. </p>
                 </div>
-                <div class="small-headings">
-                    <div class="mission">
-                        <h4>Our Mission</h4>
-                        <p>At Ddsgnr Auto Repair, our mission is to provide our customers with the highest level of car care and customer service. </p>
-                    </div>
-                    <div class="expertise">
-                        <h4>Our Expertise</h4>
-                        <p>At Ddsgnr Auto Repair, our technicians are the heart and soul of our business. With years of experience and training, </p>
-                    </div>
-                    <div class="equipment">
-                        <h4>Our Equipment</h4>
-                        <p>At Ddsgnr Auto Repair, our technicians are the heart and soul of our business. With years of experience and training, </p>
-                    </div>
-                    <div class="customer-promise">
-                        <h4>Our Customer Promise</h4>
-                        <p>At Ddsgnr Auto Repair, our mission is to provide our customers with the highest level of car care and customer service. </p>
-                    </div>
+                <div class="expertise">
+                    <h4>Our Expertise</h4>
+                    <p>At Ddsgnr Auto Repair, our technicians are the heart and soul of our business. With years of experience and training, </p>
                 </div>
-                <div class="book-container">
-                    <button class="book-button">Book Your Appointment Now</button>
-                    <a href="#" class="learn-more">Learn more <span class="arrow"><img src={Arrow.src} alt="arrow"></span></a>
+                <div class="equipment">
+                    <h4>Our Equipment</h4>
+                    <p>At Ddsgnr Auto Repair, our technicians are the heart and soul of our business. With years of experience and training, </p>
+                </div>
+                <div class="customer-promise">
+                    <h4>Our Customer Promise</h4>
+                    <p>At Ddsgnr Auto Repair, our mission is to provide our customers with the highest level of car care and customer service. </p>
                 </div>
             </div>
-            <div class="right">
-                <img src={Thumnail.src} alt="sample-video" class="car">
+            <div class="book-container">
+                <button class="book-button">Book Your Appointment Now</button>
+                <a href="#" class="learn-more">Learn more <span class="arrow"><img src={Arrow.src} alt="arrow"></span></a>
             </div>
         </div>
-        <div class="bottom-half">
-            <div class="left">
-                <img src={CarImg.src} alt="car image" class="car">
-            </div>
-            <div class="right">
-                <div class="heading-container">
-                    <h2>Our Mission</h2>
-                </div>
-                <p>At Ddsgnr Auto Repair, our mission is to provide our customers with the highest level of car care and customer service. We believe that everyone deserves to drive a safe, reliable vehicle, and it is our goal to help make that a reality. With years of experience, state-of-the-art equipment, and a team of highly trained technicians, we are dedicated to restoring your car to its best condition. Whether you need routine maintenance or complex repairs, we are committed to getting you back on the road as quickly and efficiently as possible. Trust us to take care of your car &mdash; and you &mdash; every step of the way.</p>
-            </div>
+        <div class="right">
+            <video controls poster={Thumbnail.src}>
+                <source src={SampleVideo} type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </main>
+    </div>
+    <div class="bottom-half">
+        <div class="left">
+            <img src={CarImg.src} alt="car image" class="car">
+        </div>
+        <div class="right">
+            <div class="heading-container">
+                <h2>Our Mission</h2>
+            </div>
+            <p>At Ddsgnr Auto Repair, our mission is to provide our customers with the highest level of car care and customer service. We believe that everyone deserves to drive a safe, reliable vehicle, and it is our goal to help make that a reality. With years of experience, state-of-the-art equipment, and a team of highly trained technicians, we are dedicated to restoring your car to its best condition. Whether you need routine maintenance or complex repairs, we are committed to getting you back on the road as quickly and efficiently as possible. Trust us to take care of your car &mdash; and you &mdash; every step of the way.</p>
+        </div>
+    </div>
+</main>
 
 <style>
     .top-half {
@@ -123,6 +127,35 @@ import Thumnail from "../assets/about-images/about-thumnail.png"
         border: 1px solid black;
         border-radius: 8px;
         padding: 1.1vw;
+<<<<<<< HEAD
+=======
+        transition: all 0.3s ease;
+    }
+
+    .book-button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .learn-more {
+        position: relative;
+    }
+
+    .learn-more::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: black;
+        transition: all 0.3s ease;
+    }
+
+    .learn-more:hover::before {
+        left: 0;
+        width: 80%;
+>>>>>>> 937fe08747d08a7afb004d853c3c79664c72a1f7
     }
 
     .arrow {
@@ -142,11 +175,22 @@ import Thumnail from "../assets/about-images/about-thumnail.png"
         line-height: 1.5;
     }
 
+<<<<<<< HEAD
+=======
+    video {
+        width: 550px;
+        object-fit: cover;
+    }
+
+>>>>>>> 937fe08747d08a7afb004d853c3c79664c72a1f7
     @media screen and (max-width:769px) {
         .top-half {
             flex-direction: column;
             height: 100%;
+<<<<<<< HEAD
             padding-bottom: 10vw;
+=======
+>>>>>>> 937fe08747d08a7afb004d853c3c79664c72a1f7
         }
 
         .bottom-half {
@@ -171,5 +215,14 @@ import Thumnail from "../assets/about-images/about-thumnail.png"
         .heading-container h2{
             text-align: left;
         }
+<<<<<<< HEAD
+=======
+
+        video {
+            width: 70vw;
+            min-width: 330px;
+            margin: 2rem 0;
+        }
+>>>>>>> 937fe08747d08a7afb004d853c3c79664c72a1f7
     }
 </style>

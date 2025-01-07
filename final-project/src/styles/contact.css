@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-{/*Title*/}
-.container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+    background-color: #FFFFFF;
+  }
+
+/*Title*/
+.container .intro{
     width: 100%;
     max-width: 1440px;
     height: 663px;
     padding: 112px 64px;
     gap: 80px;
-    background-color: #FFFFFF;
 }
 
 .title {
@@ -27,10 +34,15 @@
     align-items: center;
 }
 
+.row-title {
+    margin-bottom: 80px;
+}
+
 .row1 {
     width: 100%;
     max-width: 233px;
     height: 58px;
+    margin-bottom: 24px;
 }
 
 h2 {
@@ -55,31 +67,118 @@ p {
     color: #000000;
 }
 
-{/*Features*/}
+/*Features*/
 .row3 {
+    display: flex;
     width: 100%;
     max-width: 1312px;
     height: 250px;
     gap: 32px;
+    margin:0 64px 112px 64px;
+    padding: 0;
 }
 
 .row3 .col {
-    display: flex;
-    flex-direction:column;
+    display: grid;
+    flex: 1;
     width: 100%;
     max-width: 304px;
     height: 250px;
     gap: 24px;
 }
 
-.col1 {
-    display: grid;
-    grid-template-rows:repeat(4, 1fr);
-}
-
-.col1 p {
+.col1 h4 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 32px;
     line-height: 41.6px;
+    margin-bottom: 16px;
+}
+
+.col1 p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+.col1 a {
+    text-decoration: underline;
+    font-style: solid;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.col a:active {
+    color: #000000;
+}
+
+/*Icons*/
+img {
+    width: 100%;
+    max-width: 40px;
+    height: 32px;
+    margin: 8px 0px 24px 4px;
+}
+
+/*Form Container*/
+.container .form{
+    width: 100%;
+    max-width: 1440px;
+    height: 663px;
+    padding: 112px 64px;
+    gap: 80px;
+    background-color: #F7F7F7;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.row-tagline p {
+    
+}
+
+.col-img {
+    margin: 112px 64px 112px 0px;
+}
+
+.col-img img{
+    width: 100%;
+    max-width: 616px;
+    height: 838px;
+}
+
+
+
+
+
+/*Media queries*/
+@media (max-width: 768px) {
+    .row3 {
+        flex-direction: column;
+        height: auto;
+    }
+    .row3 .col {
+        max-width: 100%;
+        margin-bottom: 32px;
+    }
+    .container {
+        padding: 56px 32px;
+    }
+
+    .title {
+        padding: 0 16px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }

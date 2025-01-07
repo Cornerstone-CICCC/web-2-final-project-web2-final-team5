@@ -1,0 +1,177 @@
+<section class="faq">
+  <div class="section-header">
+    <h2>FAQ</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      varius enim in eros elementum tristique.
+    </p>
+  </div>
+  <div class="section-contents">
+    <div class="faq-accordion">
+      <ul>
+        <li>
+          <div class="accordion-header">
+            <span>Question text goes here</span>
+            <a href="#">
+              <i>+</i>
+            </a>
+          </div>
+          <div class="accordion-detail">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+              enim in eros elementum tristique.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="accordion-header">
+            <span>Question text goes here</span>
+            <a href="#">
+              <i>+</i>
+            </a>
+          </div>
+          <div class="accordion-detail">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+              enim in eros elementum tristique.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="accordion-header">
+            <span>Question text goes here</span>
+            <a href="#">
+              <i>+</i>
+            </a>
+          </div>
+          <div class="accordion-detail">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+              enim in eros elementum tristique.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="additional-box">
+      <p class="additional-title">Still have a question?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#" class="link-button">Contact</a>
+    </div>
+  </div>
+</section>
+<section class="gray">
+  <div class="section-header">
+    <h2>FAQ</h2>
+    <p>Your Automotive Repair & Maintenance Service Specialist</p>
+    <h2>SCHEDULE YOUR APPOINTMENT TODAY CALL: 299-485-488</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+      ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    </p>
+    <div class="buttons-box">
+      <a href="#" class="link-button">Contact</a>
+      <a href="#" class="link">Learn more &gt;</a>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const accordionButtons = document.querySelectorAll(".accordion-header");
+
+  const handleAccordion = (e) => {
+    const target = e.target;
+    // console.log();
+    target.nextElementSibling.classList.add("open");
+  };
+
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", handleAccordion);
+  });
+</script>
+
+<style>
+  section {
+    margin: 0 auto;
+    padding: 112px 64px;
+  }
+  section.gray {
+    background-color: #f7f7f7;
+  }
+  section.faq {
+    .section-header,
+    .section-contents {
+      width: 768px;
+      margin: 0 auto;
+    }
+  }
+  .section-header {
+    text-align: center;
+    h2 {
+      font-size: 48px;
+    }
+    p {
+      margin-top: 24px;
+      font-size: 18px;
+    }
+    margin-bottom: 80px;
+  }
+  .faq-accordion {
+    margin-top: 60px;
+    li {
+      margin-bottom: 16px;
+    }
+    .accordion-header {
+      border: 1px solid #000;
+      padding: 20px 24px;
+      font-size: 18px;
+    }
+    .accordion-detail {
+      overflow: hidden;
+      max-height: 0px;
+      transition: all 3 ease-in-out;
+    }
+    .accordion-detail.open {
+      padding: 20px 24px;
+      max-height: 500px;
+      height: auto;
+      transition: all 3 ease-in-out;
+    }
+  }
+  .additional-box {
+    text-align: center;
+    margin-top: 72px;
+    p {
+      font-size: 18px;
+    }
+    .additional-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+  }
+  .link-button {
+    padding: 12px 24px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 24px;
+    color: #000;
+  }
+  .buttons-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .link-button {
+      margin-top: 0;
+    }
+  }
+</style>

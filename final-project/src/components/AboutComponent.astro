@@ -1,0 +1,175 @@
+---
+import CarImg from "../assets/about-images/about-car-1.png"
+import Arrow from "../assets/about-images/gt-arrow.svg"
+import Thumnail from "../assets/about-images/about-thumnail.png"
+---
+
+    <main>
+        <div class="top-half">
+            <div class="left">
+                <div class="heading-container">
+                    <h2>About Us</h2>
+                </div>
+                <div class="small-headings">
+                    <div class="mission">
+                        <h4>Our Mission</h4>
+                        <p>At Ddsgnr Auto Repair, our mission is to provide our customers with the highest level of car care and customer service. </p>
+                    </div>
+                    <div class="expertise">
+                        <h4>Our Expertise</h4>
+                        <p>At Ddsgnr Auto Repair, our technicians are the heart and soul of our business. With years of experience and training, </p>
+                    </div>
+                    <div class="equipment">
+                        <h4>Our Equipment</h4>
+                        <p>At Ddsgnr Auto Repair, our technicians are the heart and soul of our business. With years of experience and training, </p>
+                    </div>
+                    <div class="customer-promise">
+                        <h4>Our Customer Promise</h4>
+                        <p>At Ddsgnr Auto Repair, our mission is to provide our customers with the highest level of car care and customer service. </p>
+                    </div>
+                </div>
+                <div class="book-container">
+                    <button class="book-button">Book Your Appointment Now</button>
+                    <a href="#" class="learn-more">Learn more <span class="arrow"><img src={Arrow.src} alt="arrow"></span></a>
+                </div>
+            </div>
+            <div class="right">
+                <img src={Thumnail.src} alt="sample-video" class="car">
+            </div>
+        </div>
+        <div class="bottom-half">
+            <div class="left">
+                <img src={CarImg.src} alt="car image" class="car">
+            </div>
+            <div class="right">
+                <div class="heading-container">
+                    <h2>Our Mission</h2>
+                </div>
+                <p>At Ddsgnr Auto Repair, our mission is to provide our customers with the highest level of car care and customer service. We believe that everyone deserves to drive a safe, reliable vehicle, and it is our goal to help make that a reality. With years of experience, state-of-the-art equipment, and a team of highly trained technicians, we are dedicated to restoring your car to its best condition. Whether you need routine maintenance or complex repairs, we are committed to getting you back on the road as quickly and efficiently as possible. Trust us to take care of your car &mdash; and you &mdash; every step of the way.</p>
+            </div>
+        </div>
+    </main>
+
+<style>
+    .top-half {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 765px;
+        padding: 5vw;
+        width: 100%;
+        gap: 2vw;
+    }
+
+    .bottom-half {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f7f7f7;
+        height: 864px;
+        padding: 5vw 5vw 8vw 5vw;
+        gap: 5vw;
+
+    }
+    
+    .left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        font-size: 48px;
+    }
+
+    .heading-container {
+        width: 100%;
+    }
+
+    .small-headings {
+        display: grid;
+        grid-template-columns: repeat(2, 290px);
+        column-gap: 2vw;
+        row-gap: 4vw;
+    }
+
+    h4 {
+        margin-bottom: 1rem;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .book-container {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .book-button {
+        margin-right: 2rem;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 1.1vw;
+    }
+
+    .arrow {
+        margin-left: 10px;
+    }
+
+    .arrow img {
+        vertical-align: middle;
+    }
+
+    .car {
+        object-fit: cover;
+        width: 550px;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    @media screen and (max-width:769px) {
+        .top-half {
+            flex-direction: column;
+            height: 100%;
+            padding-bottom: 10vw;
+        }
+
+        .bottom-half {
+            flex-direction: column;
+            height: 100%;
+            padding-bottom: 10vw;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        .small-headings {
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        }
+        .car {
+            width: 70vw;
+            min-width: 330px;
+            margin: 2rem 0;
+        }
+
+        .heading-container h2{
+            text-align: left;
+        }
+    }
+</style>

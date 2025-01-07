@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+{/*Title*/}
 .container {
     width: 100%;
     max-width: 1440px;
@@ -52,4 +53,33 @@ p {
     font-size: 18px;
     line-height: 27px;
     color: #000000;
+}
+
+{/*Features*/}
+.row3 {
+    width: 100%;
+    max-width: 1312px;
+    height: 250px;
+    gap: 32px;
+}
+
+.row3 .col {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    max-width: 304px;
+    height: 250px;
+    gap: 24px;
+}
+
+.col1 {
+    display: grid;
+    grid-template-rows:repeat(4, 1fr);
+}
+
+.col1 p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41.6px;
 }

@@ -1,1 +1,58 @@
-<div></div>
+---
+import imageLogo1 from "../assets/servicesPage/img-logo1.png";
+import imageLogo2 from "../assets/servicesPage/img-logo2.png";
+import imageLogo3 from "../assets/servicesPage/img-logo3.png";
+import imageLogo4 from "../assets/servicesPage/img-logo4.png";
+import imageLogo5 from "../assets/servicesPage/img-logo5.png";
+import imageLogo6 from "../assets/servicesPage/img-logo6.png";
+import imageLogo7 from "../assets/servicesPage/img-logo7.png";
+---
+
+<section>
+  <div class="section-header">
+    <p>We work on</p>
+    <h2>All Makes & Models</h2>
+  </div>
+  <div class="section-contents">
+    <ul class="company">
+      <li><img src={imageLogo1.src} alt="company logo" /></li>
+      <li><img src={imageLogo2.src} alt="company logo" /></li>
+      <li><img src={imageLogo3.src} alt="company logo" /></li>
+      <li><img src={imageLogo4.src} alt="company logo" /></li>
+      <li><img src={imageLogo5.src} alt="company logo" /></li>
+      <li><img src={imageLogo6.src} alt="company logo" /></li>
+      <li><img src={imageLogo7.src} alt="company logo" /></li>
+      <li><img src={imageLogo4.src} alt="company logo" /></li>
+      <li><img src={imageLogo1.src} alt="company logo" /></li>
+      <li><img src={imageLogo3.src} alt="company logo" /></li>
+      <li><img src={imageLogo7.src} alt="company logo" /></li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  section {
+    text-align: center;
+    padding: 80px 0;
+  }
+  .section-header {
+    margin-bottom: 36px;
+    h2 {
+      font-size: 32px;
+      margin-top: 24px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .section-contents {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .company {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+</style>

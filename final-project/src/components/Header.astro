@@ -91,10 +91,39 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
       </ul>
       <a href="/Contact" class="link-button">Book Your Appointment Now</a>
     </div>
+    <div class="mobile-menu">
+      <button>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/About">About</a>
+          </li>
+          <li>
+            <a href="/Services">Services</a>
+          </li>
+          <li>
+            <a href="#">Shop</a>
+          </li>
+          <li>
+            <a href="/Contact">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </header>
 
 <style>
+  header {
+    border-bottom: 1px solid #000;
+  }
   .header-top,
   .header-bottom {
     padding: 20px 30px;
@@ -109,6 +138,9 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     font-weight: 700;
     font-size: 25px;
     line-height: 30px;
+    span {
+      font-family: "Inter", serif;
+    }
   }
   .info {
     font-size: 14px;
@@ -140,6 +172,9 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
       padding-right: 0;
     }
   }
+  .mobile-menu {
+    display: none;
+  }
   .header-bottom {
     border-top: 1px solid #000;
     .header-bottom__right {
@@ -165,5 +200,23 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     color: #fff;
     border-radius: 5px;
     padding: 8px 20px;
+  }
+
+  @media (max-width: 768px) {
+    .header-top,
+    .header-bottom {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .header-top,
+    .header-bottom .header-bottom__right {
+      display: none;
+    }
+    .header-bottom {
+      border-top: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
   }
 </style>

@@ -124,30 +124,42 @@ img {
     margin: 8px 0px 24px 4px;
 }
 
+
 /*Form Container*/
 .container .form{
     width: 100%;
     max-width: 1440px;
-    height: 663px;
+    height: 1062px;
     padding: 112px 64px;
     gap: 80px;
     background-color: #F7F7F7;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 }
 
-.row-tagline p {
-    
+.row-form {
+    display: flex;
+    gap: 80px;
 }
 
-.col-img {
-    margin: 112px 64px 112px 0px;
-}
-
-.col-img img{
+.col-form {
     width: 100%;
     max-width: 616px;
     height: 838px;
+    gap: 32px;
+    margin: 112px 0px 112px 64px;
+}
+
+.title-section {
+    width: 100%;
+    max-width: 616px;
+    height: 149px;
+    gap: 16px;
+}
+
+.col-form img {
+    width: 100%;
+    max-width: 616px;
+    height: 838px;
+    margin: 112px 64px 112px 0px;
 }
 
 

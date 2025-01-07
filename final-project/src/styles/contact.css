@@ -155,6 +155,39 @@ img {
     gap: 16px;
 }
 
+.row-title-section #tagline{
+    width: 100%;
+    max-width: 53px;
+    height: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.row-title-section h2 {
+    width: 100%;
+    max-width: 233px;
+    height: 58px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57.6px;
+    margin-bottom: 24px;
+}
+
+.row-title-section #paragraph {
+    width: 100%;
+    width: 444px;
+    height: 27px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
 .col-form img {
     width: 100%;
     max-width: 616px;

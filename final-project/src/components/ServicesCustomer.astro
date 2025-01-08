@@ -1,0 +1,240 @@
+---
+import "@splidejs/splide/css";
+import CustomerLogo from "../assets/servicesPage/img-customer-logo.png";
+import Avatar1 from "../assets/servicesPage/img-avatar1.png";
+import Avatar2 from "../assets/servicesPage/img-avatar2.png";
+import Avatar3 from "../assets/servicesPage/img-avatar3.png";
+---
+
+<section class="customer">
+  <div class="section-header">
+    <h2>Customer testimonials</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="section-contents">
+    <!-- slider -->
+    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar1.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar2.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar3.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"
+                  ><img src={CustomerLogo.src} alt="" /></span
+                >
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar2.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar3.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar1.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- //slider -->
+  </div>
+</section>
+
+<style>
+  section.customer {
+    padding: 112px 30px;
+    background-color: #f7f7f7;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    h2 {
+      font-size: 48px;
+      line-height: 57px;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+  .card {
+    border: 1px solid #000;
+    margin: 16px;
+    padding: 32px;
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 24px 0;
+      font-weight: 300;
+    }
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .user-photo {
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      overflow: hidden;
+      display: inline-block;
+      flex: none;
+      img {
+        width: 100%;
+      }
+    }
+    .user-info {
+      font-size: 16px;
+      font-weight: 300;
+      .name {
+        font-weight: 500;
+        display: block;
+        padding-bottom: 6px;
+      }
+    }
+  }
+
+  /* slider */
+  .splide__pagination {
+  }
+  .splide__arrow {
+    width: 48px;
+    height: 48px;
+  }
+  .splide__arrow svg {
+    display: none;
+  }
+</style>
+
+<script>
+  import Splide from "@splidejs/splide";
+  document.addEventListener("DOMContentLoaded", function () {
+    new Splide("#image-carousel", {
+      perPage: 3,
+      breakpoints: {
+        768: {
+          perPage: 1,
+        },
+      },
+    }).mount();
+  });
+</script>

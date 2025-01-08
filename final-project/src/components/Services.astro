@@ -1,0 +1,122 @@
+<section>
+  <div class="section-header">
+    <h2>Our Services</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="section-contents">
+    <ul>
+      <li>
+        <div>
+          <p>Engine services</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Air conditioning</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Engine services</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Engine management</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Steering</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Wheel</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 112px 30px;
+    background-color: #f7f7f7;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    h2 {
+      font-size: 48px;
+      line-height: 57px;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+  .section-contents {
+    ul {
+      /* display: flex;
+      flex-wrap: wrap; */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      /* li {
+        width: 33.33%;
+      } */
+      img {
+        max-width: 100%;
+        width: auto;
+      }
+      div {
+        height: 300px;
+        background-size: cover;
+      }
+      li:first-child {
+        div {
+          background-image: url(../assets/servicesPage/img-service1.png);
+        }
+      }
+      li:nth-child(2) {
+        div {
+          background-image: url(../assets/servicesPage/img-service2.png);
+        }
+      }
+      li:nth-child(3) {
+        div {
+          background-image: url(../assets/servicesPage/img-service3.jpeg);
+        }
+      }
+      li:nth-child(4) {
+        div {
+          background-image: url(../assets/servicesPage/img-service4.jpeg);
+        }
+      }
+      li:nth-child(5) {
+        div {
+          background-image: url(../assets/servicesPage/img-service5.jpeg);
+        }
+      }
+      li:nth-child(6) {
+        div {
+          background-image: url(../assets/servicesPage/img-service6.jpeg);
+        }
+      }
+    }
+    div {
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      p {
+        position: absolute;
+        color: #fff;
+        font-size: 24px;
+        left: 10px;
+        bottom: 20px;
+      }
+    }
+  }
+</style>

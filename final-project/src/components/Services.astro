@@ -36,6 +36,7 @@
         </div>
       </li>
     </ul>
+    <button class="link-button">View more</button>
   </div>
 </section>
 
@@ -117,6 +118,34 @@
         left: 10px;
         bottom: 20px;
       }
+    }
+  }
+  @media (max-width: 768px) {
+    section {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+    .section-header {
+      text-align: left;
+      margin-bottom: 48px;
+      h2 {
+        font-size: 32px;
+      }
+    }
+    .section-contents ul {
+      margin-bottom: 48px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    li:nth-child(3) ~ li {
+      display: none;
+    }
+    .link-button {
+      display: block;
+      font-size: 16px;
+      width: 100%;
+      padding: 12px 24px;
+      border-radius: 5px;
+      border: 1px solid #000;
     }
   }
 </style>

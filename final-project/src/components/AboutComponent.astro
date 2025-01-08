@@ -251,16 +251,22 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
 
   const tl = gsap.timeline()
   tl.from(aboutUs, {y: -50, opacity: 0, duration: 0.8, delay: 0.2})
-  tl.from(smallHeadings, {rotationY: 90, opacity: 0, duration: 0.8}, "-=0.4")
-  tl.from(bookContainer, {x: "-100vw", duration: 0.8}, "-=0.8")
-  tl.from(video, {x: "100vw", duration: 1}, "-=0.5")
+  tl.from(smallHeadings, {rotationY: 90, opacity: 0, duration: 1}, "-=0.5")
+  tl.from(bookContainer, {x: "-100vw", duration: 1, ease: "power5.out"}, "-=0.8")
+  tl.from(video, {x: "100vw", duration: 1, ease: "power6.out"}, "-=0.5")
 
   const bottomHalf = document.querySelector(".bottom-half")
-  const bottomImage = document.querySelector(".bottom-half left")
+  const bottomImage = document.querySelector(".bottom-half .left")
+  const ourMission = document.querySelector(".bottom-half .right")
 
-  // const tl2 = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: 
-  //   }
-  // })
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".bottom-half",
+      start: "top-=250px top",
+      end: "bottom bottom",
+      markers: true,
+    }
+  })
+  tl2.from(bottomImage, {y: -50, opacity: 0, duration: 1})
+  tl2.from(ourMission, {rotationY: 90, duration: 1}, "-=0.5")
 </script>

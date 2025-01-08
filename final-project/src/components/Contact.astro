@@ -82,16 +82,45 @@
             <!--Contact Form container -->
             <div class="container data-section">
                 <!--First, last name -->
-                <div class="row row-names">
-
+                <div class="row row-data">
+                    <div class="col col-data">
+                        <p>First name</p>
+                        <textarea name="firstName" id="firstName"></textarea>
+                    </div>
+                    <div class="col col-data">
+                        <p>Last name</p>
+                        <textarea name="lastName" id="lastName"></textarea>
+                    </div>
                 </div>
                 <!--Phone, email -->
-                <div class="row row-numbers">
-
+                <div class="row row-data">
+                    <div class="col col-data">
+                        <p>Phone number</p>
+                        <textarea name="phone" id="phone"></textarea>
+                    </div>
+                    <div class="col col-data">
+                        <p>Email</p>
+                        <textarea name="email" id="email"></textarea>
+                    </div>
                 </div>
                 <!--Services -->
-                <div class="row row-services">
-
+                <div class="row row-data">
+                    <div class="col col-data">
+                        <label for="services">Select service
+                            <select id="services" name="options">
+                                <option value="">(select one)</option>
+                                <option value="1">Engine Services</option>
+                                <option value="2">Air Conditioning</option>
+                                <option value="3">Engine management</option>
+                                <option value="4">Steering</option>
+                                <option value="5">Wheel</option>
+                            </select>
+                          </label>
+                    </div>
+                    <div class="col col-data">
+                        <p>Appointment date</p>
+                        <textarea name="appointment" id="appointment"></textarea>
+                    </div>
                 </div>
                 <!--Message -->
                 <div class="row row-message">

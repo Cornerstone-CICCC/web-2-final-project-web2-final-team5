@@ -1,13 +1,11 @@
----
-// import TopImg from "../assets/top-images/top-image.png"
----
-
 <main>
     <div class="top-box">
         <h1>Expert Car Care You Can Trust</h1>
         <p class="desktop">Get Back on the Road Quickly with Ddsgnr, Expert Car Care You Can Trust,Expert Car Care You Can TrustExpert Car Care You Can TrustExpert Car Care You Can TrustExpert Car Care You Can Trust</p>
         <p class="mobile">Get Back on the Road Quickly with Ddsgnr, Expert Car Care You Can Trust,Expert Car Care You Can Trust</p>
-        <button>Book Your Appointment Now</button>
+        <div class="button-container">
+            <button class="book-btn">Book Your Appointment Now</button>
+        </div>
     </div>
 </main>
 
@@ -43,43 +41,23 @@
         line-height: 1.5;
     }
 
+    .top-box .button-container {
+        width: fit-content;
+    }
+
     .top-box button {
         background-color: white;
         padding: 1rem;
         transition: all 0.3s ease;
-        position: relative;
-        border: 1px solid white ;
+        border: 1.5px solid white ;
         border-radius: 5px;
     }
 
-    /* .top-box button::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 2px;
-        width: 100%;
-        background: purple;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease;
-    } */
-
     .top-box button:hover {
-        /* transform: translateY(-10px); */
-        /* transform: scale(1.1); */
-        /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-        color: #050505; */
-        /* background: white;
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text; */
         background-color: black;
-        color: rgb(255, 255, 255);
-        background-image: purple;
-        border: 1px solid transparent;
-        border-image: linear-gradient(45deg, rgb(183, 1, 1), blue) 1;
-        border-radius: 5px;
+        color: white;
+        border: 1.5px solid transparent;
+        border-image: linear-gradient(45deg, rgb(159, 11, 11), rgb(13, 13, 160)) 1;
     }
 
     .top-box .mobile {
@@ -100,3 +78,17 @@
         }
     }
 </style>
+
+<script>
+    import {gsap} from 'gsap'
+    const topHeading = document.querySelector(".top-box h1")
+    const desktop = document.querySelector(".desktop")
+    const mobile = document.querySelector(".mobile")
+    const topButton = document.querySelector(".button-container")
+
+    const tl = gsap.timeline()
+    tl.from(topHeading, {y: -50, opacity: 0, duration: 1, delay: 0.8}, "-=0.5")
+    tl.from(desktop, {y: -50, opacity: 0, duration: 1}, "-=0.8")
+    tl.from(mobile, {y: -50, opacity: 0, duration: 1}, "<")
+    tl.from(topButton, {y: -50, opacity: 0, duration: 1}, "-=0.7")
+</script>

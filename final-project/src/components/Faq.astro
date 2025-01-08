@@ -101,6 +101,7 @@
   const accordionButtons = document.querySelectorAll(".accordion-header");
 
   const handleAccordion = (e) => {
+    e.preventDefault();
     const target = e.currentTarget;
     const targetDetail = target.nextElementSibling;
 

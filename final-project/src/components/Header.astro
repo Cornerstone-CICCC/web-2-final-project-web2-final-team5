@@ -182,8 +182,10 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
 
 <style>
   header {
-    border-bottom: 1px solid #000;
     background-color: #fff;
+  }
+  .header--scrolled {
+    height: 100px;
   }
   .header-top,
   .header-bottom {
@@ -191,10 +193,24 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
   }
   .header-top {
     padding: 15px 30px;
   }
+  .header--scrolled {
+    .header-bottom {
+      position: fixed;
+      height: 80px;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition: ease 0.4s;
+      z-index: 50;
+    }
+  }
+
   .logo {
     font-weight: 700;
     font-size: 25px;
@@ -237,7 +253,7 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     display: none;
   }
   .header-bottom {
-    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
     .header-bottom__right {
       display: flex;
       align-items: center;
@@ -266,8 +282,7 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
   @media (max-width: 768px) {
     .header-top,
     .header-bottom {
-      padding-left: 24px;
-      padding-right: 24px;
+      padding: 12px 24px;
     }
     .header-top,
     .header-bottom .header-bottom__right {
@@ -275,6 +290,11 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     }
     .header-bottom {
       border-top: 0;
+    }
+    .header--scrolled {
+      .header-bottom {
+        height: 73px;
+      }
     }
     .mobile-menu {
       display: block;
@@ -364,8 +384,8 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     }
     .mobile-menu::after {
       content: "";
-      display: block;
-      position: absolute;
+      display: none;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
@@ -375,6 +395,7 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
       transition: all 0.5s ease-in-out;
     }
     .mobile-menu.open::after {
+      display: block;
       z-index: 1;
       background-color: rgba(0, 0, 0, 0.3);
       transition: all 0.5s ease-in-out;
@@ -399,4 +420,29 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
   };
 
   (mobileMenu as HTMLElement).addEventListener("change", handleBurgerMenu);
+</script>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 769px)", () => {
+    ScrollTrigger.create({
+      start: "top -55",
+      end: 99999,
+      toggleClass: { className: "header--scrolled", targets: "header" },
+    });
+  });
+
+  // mm.add("(max-width: 768px)", () => {
+  //   // ScrollTrigger.create({
+  //   //   start: "top 0",
+  //   //   end: 99999,
+  //   //   toggleClass: { className: "header--scrolled", targets: "header" },
+  //   // });
+  // });
 </script>

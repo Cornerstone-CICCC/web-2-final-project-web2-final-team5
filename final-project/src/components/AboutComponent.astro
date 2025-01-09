@@ -4,8 +4,7 @@ import Arrow from "../assets/about-images/gt-arrow.svg";
 import Thumbnail from "../assets/about-images/about-thumbnail.png";
 import SampleVideo from "../assets/about-images/sample-video.mp4";
 ---
-
-<main>
+<section class="about-section">
   <div class="top-half">
     <div class="left">
       <div class="heading-container">
@@ -43,11 +42,9 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
       </div>
       <div class="book-container">
         <button class="book-button">Book Your Appointment Now</button>
-        <a href="#" class="learn-more"
-          >Learn more <span class="arrow"
-            ><img src={Arrow.src} alt="arrow" /></span
-          ></a
-        >
+        <a href="#" class="learn-more">
+          Learn more <span class="arrow"><img src={Arrow.src} alt="arrow" /></span>
+        </a>
       </div>
     </div>
     <div class="right">
@@ -59,7 +56,7 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
   </div>
   <div class="bottom-half">
     <div class="left">
-      <img src={CarImg.src} alt="car image" class="car" />
+      <img src={CarImg.src} alt="car image" class="car-image" />
     </div>
     <div class="right">
       <div class="heading-container">
@@ -78,9 +75,13 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
       </p>
     </div>
   </div>
-</main>
+</section>
 
 <style>
+  .about-section {
+    overflow: hidden;
+  }
+
   .top-half {
     display: flex;
     justify-content: center;
@@ -163,6 +164,7 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
 
   .learn-more {
     position: relative;
+    color: black;
   }
 
   .learn-more::before {
@@ -189,18 +191,18 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
     vertical-align: middle;
   }
 
-  .car {
+  video {
+    width: 550px;
+    object-fit: cover;
+  }
+
+  .car-image {
     object-fit: cover;
     width: 550px;
   }
 
   p {
     line-height: 1.5;
-  }
-
-  video {
-    width: 550px;
-    object-fit: cover;
   }
 
   @media screen and (max-width: 769px) {
@@ -222,20 +224,55 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
     .small-headings {
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     }
-    .car {
-      width: 70vw;
-      min-width: 330px;
-      margin: 2rem 0;
-    }
-
-    .heading-container h2 {
-      text-align: left;
-    }
 
     video {
       width: 90vw;
       min-width: 330px;
       margin: 2rem 0;
     }
+
+    .car-image {
+      width: 90vw;
+      min-width: 330px;
+      margin: 2rem 0;
+    }
   }
 </style>
+
+<script>
+  import {gsap} from 'gsap'
+  import {ScrollTrigger} from 'gsap/ScrollTrigger'
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  const aboutUs = document.querySelector(".heading-container h2")
+  const smallHeadings = document.querySelector(".small-headings")
+  const bookContainer = document.querySelector(".book-container")
+  const video = document.querySelector(".right video")
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".about-section",
+      start: "top-=150px top",
+      end: "bottom bottom", 
+    }
+  })
+  tl.from(aboutUs, {y: -60, opacity: 0, duration: 0.9, delay: 0.2})
+  tl.from(smallHeadings, {y: -60, opacity: 0, duration: 0.9}, "-=0.7")
+  tl.from(bookContainer, {y: -60, opacity: 0, duration: 0.9}, "-=0.7")
+  tl.from(video, {x: "100vw", duration: 1, ease: "power4.easeOut"}, "-=0.7")
+
+  const bottomHalf = document.querySelector(".bottom-half")
+  const bottomImage = document.querySelector(".bottom-half .left")
+  const ourMission = document.querySelector(".bottom-half .right")
+
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".bottom-half",
+      start: "top-=180px top",
+      end: "bottom bottom",
+    }
+  })
+  tl2.from(bottomImage, {y: -50, opacity: 0, duration: 1})
+  tl2.from(ourMission, {rotationY: 90, duration: 0.8}, "-=0.5")
+</script>

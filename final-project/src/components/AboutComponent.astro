@@ -4,8 +4,7 @@ import Arrow from "../assets/about-images/gt-arrow.svg";
 import Thumbnail from "../assets/about-images/about-thumbnail.png";
 import SampleVideo from "../assets/about-images/sample-video.mp4";
 ---
-
-<main>
+<section class="about-section">
   <div class="top-half">
     <div class="left">
       <div class="heading-container">
@@ -57,7 +56,7 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
   </div>
   <div class="bottom-half">
     <div class="left">
-      <img src={CarImg.src} alt="car image" class="car" />
+      <img src={CarImg.src} alt="car image" class="car-image" />
     </div>
     <div class="right">
       <div class="heading-container">
@@ -76,9 +75,13 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
       </p>
     </div>
   </div>
-</main>
+</section>
 
 <style>
+  .about-section {
+    overflow: hidden;
+  }
+
   .top-half {
     display: flex;
     justify-content: center;
@@ -161,6 +164,7 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
 
   .learn-more {
     position: relative;
+    color: black;
   }
 
   .learn-more::before {
@@ -187,18 +191,18 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
     vertical-align: middle;
   }
 
-  .car {
+  video {
+    width: 550px;
+    object-fit: cover;
+  }
+
+  .car-image {
     object-fit: cover;
     width: 550px;
   }
 
   p {
     line-height: 1.5;
-  }
-
-  video {
-    width: 550px;
-    object-fit: cover;
   }
 
   @media screen and (max-width: 769px) {
@@ -220,17 +224,14 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
     .small-headings {
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     }
-    .car {
-      width: 70vw;
+
+    video {
+      width: 90vw;
       min-width: 330px;
       margin: 2rem 0;
     }
 
-    .heading-container h2 {
-      text-align: left;
-    }
-
-    video {
+    .car-image {
       width: 90vw;
       min-width: 330px;
       margin: 2rem 0;
@@ -249,11 +250,18 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
   const bookContainer = document.querySelector(".book-container")
   const video = document.querySelector(".right video")
 
-  const tl = gsap.timeline()
-  tl.from(aboutUs, {y: -50, opacity: 0, duration: 0.8, delay: 0.2})
-  tl.from(smallHeadings, {rotationY: 90, opacity: 0, duration: 1}, "-=0.5")
-  tl.from(bookContainer, {x: "-100vw", duration: 1, ease: "power5.out"}, "-=0.8")
-  tl.from(video, {x: "100vw", duration: 1, ease: "power6.out"}, "-=0.5")
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".about-section",
+      start: "top-=150px top",
+      end: "bottom bottom", 
+      markers: true,
+    }
+  })
+  tl.from(aboutUs, {y: -60, opacity: 0, duration: 0.9, delay: 0.2})
+  tl.from(smallHeadings, {y: -60, opacity: 0, duration: 0.9}, "-=0.7")
+  tl.from(bookContainer, {y: -60, opacity: 0, duration: 0.9}, "-=0.7")
+  tl.from(video, {x: "100vw", duration: 1, ease: "power4.easeOut"}, "-=0.7")
 
   const bottomHalf = document.querySelector(".bottom-half")
   const bottomImage = document.querySelector(".bottom-half .left")
@@ -262,7 +270,7 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
   const tl2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".bottom-half",
-      start: "top-=250px top",
+      start: "top-=180px top",
       end: "bottom bottom",
     }
   })

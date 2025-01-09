@@ -6,15 +6,14 @@ import Linkedin from "../assets/team-images/our-team-linkedin.svg"
 import Twitter from "../assets/team-images/our-team-twitter.svg"
 import Dribble from "../assets/team-images/dribble-icon.svg"
 ---
-
-<main>
+<section class="our-team">
     <div class="first-box">
         <h5>Tagline</h5>
         <h2>Our team</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
     </div>
     <div class="second-box">
-        <div class="profile">
+        <div class="profile first">
             <img src={Team1.src} alt="person1" class="person">
             <h6>Full name</h6>
             <p class="job-title">Job title</p>
@@ -25,7 +24,7 @@ import Dribble from "../assets/team-images/dribble-icon.svg"
                 <a href="#"><img src={Dribble.src} alt="dribble" class="icon"></a>
             </div>
         </div>
-        <div class="profile">
+        <div class="profile second">
             <img src={Team2.src} alt="person2" class="person">
             <h6>Full name</h6>
             <p class="job-title">Job title</p>
@@ -36,7 +35,7 @@ import Dribble from "../assets/team-images/dribble-icon.svg"
                 <a href="#"><img src={Dribble.src} alt="dribble" class="icon"></a>
             </div>
         </div>
-        <div class="profile">
+        <div class="profile third">
             <img src={Team3.src} alt="person3" class="person">
             <h6>Full name</h6>
             <p class="job-title">Job title</p>
@@ -48,12 +47,14 @@ import Dribble from "../assets/team-images/dribble-icon.svg"
             </div>
         </div>
     </div>
-</main>
+</section>
 
 <style>
-    main {
-        height: 110vh;
+    .our-team {
+        height: 100%;
+        overflow: hidden;
     }
+
     .first-box {
         text-align: center;
         margin: 5vw 0;
@@ -125,4 +126,24 @@ import Dribble from "../assets/team-images/dribble-icon.svg"
 
     gsap.registerPlugin(ScrollTrigger);
 
+    const firstLine = document.querySelector(".first-box h5")
+    const secondLine = document.querySelector(".first-box h2")
+    const thirdLine = document.querySelector(".first-box p")
+    const profile1 = document.querySelector(".first")
+    const profile2 = document.querySelector(".second")
+    const profile3 = document.querySelector(".third")
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".our-team",
+            start: "top-=300px top",
+            end: "bottom bottom",
+        }
+    })
+    tl.from(firstLine, {y: -100, opacity: 0, duration: 0.8, delay: 0.3})
+    tl.from(secondLine, {y: -100, opacity: 0, duration: 0.8}, "<")
+    tl.from(thirdLine, {y: -100, opacity: 0, duration: 0.8}, "<")
+    tl.from(profile1, {x: "130vw", duration: 0.8, ease: "power4.easeOut"}, "-=0.5")
+    tl.from(profile2, {x: "130vw", duration: 0.8, ease: "power4.easeOut"},"-=0.7")
+    tl.from(profile3, {x: "130vw", duration: 0.8, ease: "power4.easeOut"}, "-=0.7")
 </script>

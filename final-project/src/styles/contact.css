@@ -116,6 +116,14 @@ p {
 /*Form Container*/
 .form {
     background-color: #F7F7F7;
+    
+display: flex;
+width: 100%;
+max-width: 100%;
+gap: 32px;
+margin:0 0 112px 0;
+/*     margin: 0 auto 112px auto; */
+padding: 0;
 }
 
 .container .form{
@@ -130,6 +138,7 @@ p {
     display: flex;
     gap: 80px;
 }
+
 
 .col-form {
     width: 100%;
@@ -180,7 +189,7 @@ p {
 /*     height: 838px;
     margin: 112px 64px 112px 0px; */
     height: auto;
-    margin: 32px 0;
+    margin: 0 0;
 }
 
 /*Contact Form Container*/
@@ -326,6 +335,7 @@ p {
     line-height: 24px;
 }
 
+
 /*Media queries*/
 /*Mobile devices*/
 @media (max-width: 767px) {
@@ -383,12 +393,14 @@ p {
     /*Form Container*/
     .container .form {
         padding: 32px 16px;
+        display: flex;
     }
 
     .row-form {
         flex-direction: column;
         gap: 16px;
         padding: 32px 16px;
+        justify-content: center;
     }
 
     .col-form {
@@ -429,7 +441,11 @@ p {
         height: auto;
     }
 
-    .col-form img {
+    .image-section {
+        padding:0 64px;
+    }
+
+    .image-section img {
         display: none;
     }
 }
@@ -467,6 +483,8 @@ p {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 32px;
+        display: flex;
+        justify-content: center;
     }
 
     .col-form {
@@ -492,11 +510,16 @@ p {
         height: auto;
     }
 
-    .col-form img {
+    .image-section {
+        padding:0 64px;
+    }
+
+    .image-section img {
+        display: block;
         width: 100%;
         max-width: 100%;
         height: auto;
-        margin: 112px 64px 112px 64px;
+        margin: 32px 0;
     }
 }
 
@@ -559,7 +582,11 @@ p {
         width: 100%;
     }
 
-    .col-form img {
+    .image-section {
+        padding:0 64px;
+    }
+
+    .image-section img {
         width: 100%;
         max-width: 616px;
         height: 838px;

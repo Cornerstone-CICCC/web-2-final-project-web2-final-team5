@@ -3,6 +3,9 @@ import CarImg from "../assets/about-images/about-car-1.png";
 import Arrow from "../assets/about-images/gt-arrow.svg";
 import Thumbnail from "../assets/about-images/about-thumbnail.png";
 import SampleVideo from "../assets/about-images/sample-video.mp4";
+import PlayButton from "../assets/about-images/play-button.svg";
+import PlayIcon from "../assets/about-images/play-icon.svg";
+import "../styles/about-modal.css"
 ---
 <section class="about-section">
   <div class="top-half">
@@ -47,11 +50,17 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
         </a>
       </div>
     </div>
-    <div class="right">
-      <video controls poster={Thumbnail.src}>
+    <div class="right video-box">
+      <video poster={Thumbnail.src}>
         <source src={SampleVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <div class="play-box">
+        <img src={PlayIcon.src} alt="play icon">
+      </div>
+      <div class="play-box play-button">
+        <img src={PlayButton.src} alt="play button">
+      </div>
     </div>
   </div>
   <div class="bottom-half">
@@ -205,6 +214,21 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
     line-height: 1.5;
   }
 
+  .video-box {
+    position: relative;
+  }
+
+  .play-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+
   @media screen and (max-width: 769px) {
     .top-half {
       flex-direction: column;
@@ -240,6 +264,37 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
 </style>
 
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const videoBox = document.querySelector(".play-button") as HTMLDivElement
+    const modalVideo = document.querySelector(".video-box video") as HTMLVideoElement
+
+    videoBox?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const prevOverlay = document.querySelector(".overlay") as HTMLDivElement
+      if (prevOverlay) {
+        prevOverlay.remove()
+      }
+      const overlay = document.createElement("div")
+      const modal = document.createElement("div")
+      const videoClone = modalVideo.cloneNode(true) as HTMLVideoElement
+      overlay.classList.add("overlay")
+      modal.classList.add("modal")
+      videoClone.classList.add("modal-video")
+      videoClone.setAttribute("controls", "true")
+      videoClone.removeAttribute("poster")
+      modal.appendChild(videoClone)
+      overlay.appendChild(modal)
+      document.body.appendChild(overlay)
+    })
+
+    document.addEventListener("click", function (e) {
+      const currOverlay = document.querySelector(".overlay") as HTMLDivElement
+      if (currOverlay && !(e.target as HTMLElement).closest(".modal")) {
+          currOverlay.remove()
+      }
+    })
+  })
+
   import {gsap} from 'gsap'
   import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
@@ -248,7 +303,7 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
   const aboutUs = document.querySelector(".heading-container h2")
   const smallHeadings = document.querySelector(".small-headings")
   const bookContainer = document.querySelector(".book-container")
-  const video = document.querySelector(".right video")
+  const video = document.querySelector(".video-box")
 
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -274,5 +329,5 @@ import SampleVideo from "../assets/about-images/sample-video.mp4";
     }
   })
   tl2.from(bottomImage, {y: -50, opacity: 0, duration: 1})
-  tl2.from(ourMission, {rotationY: 90, duration: 0.8}, "-=0.5")
+  tl2.from(ourMission, {rotationY: 90, duration: 0.9}, "-=0.6")
 </script>

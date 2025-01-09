@@ -332,7 +332,8 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
         transition: all 0.5s ease-in-out;
         overflow: hidden;
         padding: 24px 36px;
-        width: 360px;
+        width: 85vw;
+        max-width: 360px;
         transform: translateX(380px);
         z-index: 100;
       }
@@ -361,17 +362,39 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
         }
       }
     }
+    .mobile-menu::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: transparent;
+      z-index: -1;
+      transition: all 0.5s ease-in-out;
+    }
+    .mobile-menu.open::after {
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: all 0.5s ease-in-out;
+    }
   }
 </style>
 
 <script>
-  const mobileMenu = document.querySelector("#menu-checkbox");
+  const mobileMenuWrap = document.querySelector(".mobile-menu");
+  const mobileMenu = (mobileMenuWrap as HTMLElement).querySelector(
+    "#menu-checkbox"
+  );
   const bodyEl = document.querySelector("body");
   const handleBurgerMenu = (e) => {
     if (e.target.checked) {
       (bodyEl as HTMLElement).style.overflow = "hidden";
+      (mobileMenuWrap as HTMLElement).classList.add("open");
     } else {
       (bodyEl as HTMLElement).style.overflow = "";
+      (mobileMenuWrap as HTMLElement).classList.remove("open");
     }
   };
 

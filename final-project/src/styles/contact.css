@@ -342,30 +342,109 @@ img {
 }
 
 /*Media queries*/
-@media (max-width: 768px) {
-    .row3 {
-        flex-direction: column;
-        height: auto;
-    }
-    .row3 .col {
-        max-width: 100%;
-        margin-bottom: 32px;
-    }
-    .container {
-        padding: 56px 32px;
+/*Mobile devices*/
+@media (max-width: 767px) {
+    
+    /*Contact Us Container*/
+    .container .intro {
+        padding: 32px 16px;
     }
 
     .title {
-        padding: 0 16px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        gap: 8px;
+    }
+
+    .row1,
+    .row2 {
+        max-width: 100%;
     }
 
     h2 {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 24px;
+        line-height: 30px;
     }
 
     p {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 20px;
     }
+
+    .row3 {
+        flex-direction: column;
+        margin: 0 16px 32px 16px;
+    }
+
+    .row3 .col {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        gap: 16px;
+    }
+
+    .col1 h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .col1 p,
+    .col1 a {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    /*Form Container*/
+    .container .form {
+        padding: ;
+    }
+}
+
+/* Tablet devices */ 
+@media (min-width: 768px) and (max-width: 1023px) { 
+    .container .intro { 
+        padding: 64px 32px; 
+    } 
+    .title { 
+        width: 100%; 
+        max-width: 80%; 
+        height: auto; 
+        gap: 12px; 
+    } 
+    .row3 { 
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        margin: 0 32px 64px 32px; 
+    } 
+    .row3 .col { 
+        width: 48%; 
+        max-width: 48%; 
+        height: auto; 
+        gap: 20px; 
+    } 
+}
+
+/* Desktop devices */ 
+@media (min-width: 1024px) { 
+    .container .intro { 
+        padding: 112px 64px; 
+    } 
+    .title { 
+        width: 100%; 
+        max-width: 768px; 
+        height: 109px; 
+        gap: 16px; 
+    } 
+    .row3 { 
+        flex-direction: row; 
+        flex-wrap: nowrap; 
+        margin: 0 64px 112px 64px; 
+    } 
+    .row3 .col { 
+        width: 100%; 
+        max-width: 304px; 
+        height: 250px; 
+        gap: 24px; 
+    } 
 }

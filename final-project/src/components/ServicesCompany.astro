@@ -8,7 +8,7 @@ import imageLogo6 from "../assets/servicesPage/img-logo6.png";
 import imageLogo7 from "../assets/servicesPage/img-logo7.png";
 ---
 
-<section>
+<section class="services companies">
   <div class="section-header">
     <h2><span>We work on</span> All Makes & Models</h2>
   </div>
@@ -94,3 +94,27 @@ import imageLogo7 from "../assets/servicesPage/img-logo7.png";
     }
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".companies .section-header", {
+    scrollTrigger: {
+      trigger: ".companies",
+      // markers: true,
+      start: "center center",
+    },
+    x: -300,
+    opacity: 0,
+    duration: 1,
+  });
+
+  gsap.from(".company", {
+    x: 300,
+    // transformOrigin: "center bottom",
+    duration: 1,
+  });
+</script>

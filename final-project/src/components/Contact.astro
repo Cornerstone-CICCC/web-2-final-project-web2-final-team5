@@ -1,3 +1,7 @@
+---
+import '../styles/contact.css';
+---
+
 <!--Intro Contact Container -->
 <div class="container intro">
     <!--Title -->
@@ -85,22 +89,22 @@
                 <div class="row row-data">
                     <div class="col col-data">
                         <p>First name</p>
-                        <textarea name="firstName" id="firstName"></textarea>
+                        <input required id="first-name" type="text" name="first-name">
                     </div>
                     <div class="col col-data">
                         <p>Last name</p>
-                        <textarea name="lastName" id="lastName"></textarea>
+                        <input required id="last-name" type="text" name="last-name">
                     </div>
                 </div>
                 <!--Phone, email -->
                 <div class="row row-data">
                     <div class="col col-data">
                         <p>Phone number</p>
-                        <textarea name="phone" id="phone"></textarea>
+                        <input required id="phone" type="text" name="phone">
                     </div>
                     <div class="col col-data">
                         <p>Email</p>
-                        <textarea name="email" id="email"></textarea>
+                        <input required id="email" type="text" name="email">
                     </div>
                 </div>
                 <!--Services -->
@@ -130,13 +134,15 @@
                 </div>
                 <!--Accept terms -->
                 <div class="row row-terms">
-                    <label for="terms">
-                        <input id="terms" type="checkbox" required />I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">Terms</a>
+                    <label for="terms" class="terms-label">
+                        <input id="terms" type="checkbox" required />
+                        I accept the 
+                        <a href="https://example.com/">Terms</a>
                     </label>
                 </div>
                 <!--Submit Button -->
                 <div class="row row-btn">
-
+                    <button>Submit</button>
                 </div>
             </div>
         </div>

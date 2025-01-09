@@ -2,7 +2,6 @@
 .container .intro{
     width: 100%;
     max-width: 1440px;
-    height: 663px;
     padding: 112px 64px;
     gap: 80px;
 }
@@ -31,8 +30,8 @@
 .row1 {
     width: 100%;
     max-width: 233px;
-    height: 58px;
     margin-bottom: 24px;
+    margin-top: 112px;
 }
 
 h2 {
@@ -46,7 +45,6 @@ h2 {
 .row2 {
     width: 100%;
     max-width: 444px;
-    height: 27px;
 }
 
 p {
@@ -62,7 +60,6 @@ p {
     display: flex;
     width: 100%;
     max-width: 1312px;
-    height: 250px;
     gap: 32px;
     margin:0 64px 112px 64px;
     padding: 0;
@@ -73,7 +70,6 @@ p {
     flex: 1;
     width: 100%;
     max-width: 304px;
-    height: 250px;
     gap: 24px;
 }
 
@@ -116,13 +112,15 @@ img {
 
 
 /*Form Container*/
+.form {
+    background-color: #F7F7F7;
+}
+
 .container .form{
     width: 100%;
     max-width: 1440px;
-    height: 1062px;
     padding: 112px 64px;
     gap: 80px;
-    background-color: #F7F7F7;
 }
 
 .row-form {
@@ -133,7 +131,6 @@ img {
 .col-form {
     width: 100%;
     max-width: 616px;
-    height: 838px;
     gap: 32px;
     margin: 112px 0px 112px 64px;
 }
@@ -141,14 +138,12 @@ img {
 .title-section {
     width: 100%;
     max-width: 616px;
-    height: 149px;
     gap: 16px;
 }
 
 .row-title-section #tagline{
     width: 100%;
     max-width: 53px;
-    height: 24px;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -160,7 +155,6 @@ img {
 .row-title-section h2 {
     width: 100%;
     max-width: 233px;
-    height: 58px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 48px;
@@ -171,7 +165,6 @@ img {
 .row-title-section #paragraph {
     width: 100%;
     width: 444px;
-    height: 27px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -189,21 +182,18 @@ img {
 .data-section {
     width: 100%;
     max-width: 616px;
-    height: 657px;
     gap: 24px;
 }
 .row-data {
     display: flex;
     width: 100%;
     max-width: 616px;
-    height: 80px;
     gap: 24px;
 }
 
 .col-data { 
     width: 100%;
     max-width: 296px;
-    height: 24px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -218,10 +208,9 @@ img {
     text-align: left;
 }
 
-.col-data textarea {
+.col-data input[type="text"]{
     width: 100%;
     max-width: 296px;
-    height: 48px;
     border-radius: 5px;
     border: solid 1px #000000;
     padding: 12px;
@@ -234,28 +223,25 @@ img {
     border-radius: 5px;
     border: solid 1px #000000;
     width: 296px;
-    height: 26px;
 }
 
-.col-data input {
+.col-data input[type="date"]{
     width: 100%;
     border-radius: 5px;
     border: solid 1px #000000;
-    padding: 2px;
+    padding: 12px;
 }
 
 /*Message area*/
 .row-message {
     width: 100%;
     max-width: 616px;
-    height: 212px;
     gap: 8px;
 }
 
 .row-message p{
     width: 100%;
     max-width: 616px;
-    height: 24px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -265,14 +251,13 @@ img {
 .row-message textarea {
     width: 100%;
     max-width: 616px;
-    height: 180px;
     border-radius: 5px;
     border: 1px solid #000000;
+    padding: 12px;
 }
 
 .row-message textarea::placeholder {
     width: 592px;
-    height: 24px;
     text-align: left;
     font-family: 'Roboto', sans-serif; 
     font-weight: 400; 
@@ -283,34 +268,296 @@ img {
 
 /*terms*/
 .row-terms {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 146px;
+    padding-bottom: 16px;
+    gap: 12px;
+}
 
+.terms-label {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400; 
+    font-size: 14px; 
+    line-height: 21px;
+}
+
+.terms-label input[type="checkbox"] {
+    width: 18px;
+    height: 21px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #000000;
+    margin-right: 8px;
+}
+
+.row-terms a {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400; 
+    font-size: 14px; 
+    line-height: 21px;
+    text-decoration: underline;
+    color: #000000;
+    margin-left: 1.5px;
+}
+
+/*Button*/
+.row-btn button{
+    width: 100%;
+    max-width: 99px;
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin-top: 24px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400; 
+    font-size: 16px; 
+    line-height: 24px;
 }
 
 /*Media queries*/
-@media (max-width: 768px) {
-    .row3 {
-        flex-direction: column;
-        height: auto;
-    }
-    .row3 .col {
-        max-width: 100%;
-        margin-bottom: 32px;
-    }
-    .container {
-        padding: 56px 32px;
+/*Mobile devices*/
+@media (max-width: 767px) {
+    
+    /*Contact Us Container*/
+    .container .intro {
+        padding: 32px 16px;
     }
 
     .title {
-        padding: 0 16px;
+        width: 100%;
+        max-width: 100%;
+        gap: 8px;
+    }
+
+    .row1,
+    .row2 {
+        max-width: 100%;
     }
 
     h2 {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 24px;
+        line-height: 30px;
     }
 
     p {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .row3 {
+        flex-direction: column;
+        margin: 0 16px 32px 16px;
+    }
+
+    .row3 .col {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        gap: 16px;
+    }
+
+    .col1 h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .col1 p,
+    .col1 a {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    /*Form Container*/
+    .container .form {
+        padding: 32px 16px;
+    }
+
+    .row-form {
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px 16px;
+    }
+
+    .col-form {
+        max-width: 100%;
+        margin: 32px 0;
+    }
+
+    .title-section,
+    .data-section {
+        padding:0 64px;
+    }
+
+    .title-section,
+    .data-section,
+    .row-message,
+    .row-terms,
+    .row-btn {
+        max-width: 100%;
+        gap: 16px;
+    }
+
+    #tagline, h2, #paragraph, p, label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .col-data input[type="text"],
+    .col-data select,
+    .col-data input[type="date"],
+    .row-message textarea {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .col-form img {
+        width: 100%;
+        height: auto;
+        margin: 32px 0;
+    }
+}
+
+/* Tablet devices */ 
+@media (min-width: 768px) and (max-width: 1023px) { 
+    /*Contact Us Container*/
+    .container .intro { 
+        padding: 64px 32px; 
+    } 
+    .title { 
+        width: 100%; 
+        max-width: 80%; 
+        height: auto; 
+        gap: 12px; 
+    } 
+    .row3 { 
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        margin: 0 32px 64px 32px; 
+    } 
+    .row3 .col { 
+        width: 48%; 
+        max-width: 48%; 
+        height: auto; 
+        gap: 20px; 
+    }
+
+    /*Form Container*/
+    .container .form {
+        padding: 64px 32px;
+    }
+
+    .row-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .col-form {
+        width: 48%;
+        max-width: 48%;
+        margin: 64px 0;
+    }
+
+    .title-section,
+    .data-section,
+    .row-message,
+    .row-terms,
+    .row-btn {
+        max-width: 80%;
+        gap: 20px;
+    }
+
+    .col-data input[type="text"],
+    .col-data select,
+    .col-data input[type="date"],
+    .row-message textarea {
+        width: 100%;
+        height: auto;
+    }
+
+    .col-form img {
+        width: 100%;
+        height: auto;
+        margin: 32px 0;
+    }
+}
+
+/* Desktop devices */ 
+@media (min-width: 1024px) { 
+    /*Contact Us Container*/
+    .container .intro { 
+        padding: 112px 64px; 
+    } 
+    
+    .title { 
+        width: 100%; 
+        max-width: 768px; 
+        gap: 16px; 
+    } 
+
+    .row1 {
+        margin-top: 112px;
+    }
+    .row3 { 
+        flex-direction: row; 
+        flex-wrap: nowrap; 
+        margin: 0 64px 112px 64px; 
+    } 
+    .row3 .col { 
+        width: 100%; 
+        max-width: 304px; 
+        gap: 24px; 
+    }
+    
+    /*Form Container*/
+    .container .form {
+        padding: 112px 64px;
+    }
+
+    .row-form {
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .col-form {
+        width: 100%;
+        max-width: 616px;
+        margin: 112px 0px 112px 64px;
+    }
+
+    .title-section,
+    .data-section,
+    .row-message,
+    .row-terms,
+    .row-btn {
+        max-width: 616px;
+        gap: 24px;
+    }
+
+    .col-data input[type="text"],
+    .col-data select,
+    .col-data input[type="date"],
+    .row-message textarea {
+        width: 100%;
+    }
+
+    .col-form img {
+        width: 100%;
+        max-width: 616px;
+        height: 838px;
+        margin: 112px 64px 112px 0px;
     }
 }

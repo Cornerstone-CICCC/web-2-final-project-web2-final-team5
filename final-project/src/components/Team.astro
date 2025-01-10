@@ -136,11 +136,11 @@ import Dribble from "../assets/team-images/dribble-icon.svg"
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".our-team",
-            start: "top-=300px top",
+            start: "top-=200px top",
             end: "bottom bottom",
         }
     })
-    tl.from(firstLine, {y: -100, opacity: 0, duration: 0.8, delay: 0.3})
+    tl.from(firstLine, {y: -100, opacity: 0, duration: 0.8})
     tl.from(secondLine, {y: -100, opacity: 0, duration: 0.8}, "<")
     tl.from(thirdLine, {y: -100, opacity: 0, duration: 0.8}, "<")
     tl.from(profile1, {x: "130vw", duration: 0.8, ease: "power4.easeOut"}, "-=0.5")

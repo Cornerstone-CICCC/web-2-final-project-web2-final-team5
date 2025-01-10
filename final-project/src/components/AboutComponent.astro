@@ -10,44 +10,46 @@ import "../styles/about-modal.css"
 <section class="about-section">
   <div class="top-half">
     <div class="left">
-      <div class="heading-container top-animation">
-        <h2>About Us</h2>
-      </div>
-      <div class="small-headings top-animation">
-        <div class="mission">
-          <h4>Our Mission</h4>
-          <p>
-            At Ddsgnr Auto Repair, our mission is to provide our customers with
-            the highest level of car care and customer service.
-          </p>
+      <div class="top-left">
+        <div class="heading-container top-animation">
+          <h2>About Us</h2>
         </div>
-        <div class="expertise">
-          <h4>Our Expertise</h4>
-          <p>
-            At Ddsgnr Auto Repair, our technicians are the heart and soul of our
-            business. With years of experience and training,
-          </p>
+        <div class="small-headings top-animation">
+          <div class="mission">
+            <h4>Our Mission</h4>
+            <p>
+              At Ddsgnr Auto Repair, our mission is to provide our customers with
+              the highest level of car care and customer service.
+            </p>
+          </div>
+          <div class="expertise">
+            <h4>Our Expertise</h4>
+            <p>
+              At Ddsgnr Auto Repair, our technicians are the heart and soul of our
+              business. With years of experience and training,
+            </p>
+          </div>
+          <div class="equipment">
+            <h4>Our Equipment</h4>
+            <p>
+              At Ddsgnr Auto Repair, our technicians are the heart and soul of our
+              business. With years of experience and training,
+            </p>
+          </div>
+          <div class="customer-promise">
+            <h4>Our Customer Promise</h4>
+            <p>
+              At Ddsgnr Auto Repair, our mission is to provide our customers with
+              the highest level of car care and customer service.
+            </p>
+          </div>
         </div>
-        <div class="equipment">
-          <h4>Our Equipment</h4>
-          <p>
-            At Ddsgnr Auto Repair, our technicians are the heart and soul of our
-            business. With years of experience and training,
-          </p>
+        <div class="book-container top-animation">
+          <button class="book-button">Book Your Appointment Now</button>
+          <a href="#" class="learn-more">
+            Learn more <span class="arrow"><img src={Arrow.src} alt="arrow" /></span>
+          </a>
         </div>
-        <div class="customer-promise">
-          <h4>Our Customer Promise</h4>
-          <p>
-            At Ddsgnr Auto Repair, our mission is to provide our customers with
-            the highest level of car care and customer service.
-          </p>
-        </div>
-      </div>
-      <div class="book-container top-animation">
-        <button class="book-button">Book Your Appointment Now</button>
-        <a href="#" class="learn-more">
-          Learn more <span class="arrow"><img src={Arrow.src} alt="arrow" /></span>
-        </a>
       </div>
     </div>
     <div class="right video-box">
@@ -117,6 +119,11 @@ import "../styles/about-modal.css"
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .top-left {
+    display: flex;
+    flex-direction: column;
   }
 
   .right {
@@ -329,7 +336,6 @@ import "../styles/about-modal.css"
   tl.from(topAnimation, {y: -30, opacity: 0, duration: 0.9, stagger: 0.3, delay: 0.2})
   tl.from(video, {x: "70vw", duration: 0.8, ease: "power4.easeOut"}, "-=0.9")
 
-  const bottomHalf = document.querySelector(".bottom-half")
   const bottomImage = document.querySelector(".bottom-half .left")
   const ourMission = document.querySelector(".bottom-half .right")
 

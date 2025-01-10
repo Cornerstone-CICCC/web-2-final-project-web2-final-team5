@@ -1,4 +1,4 @@
-<section>
+<section class="services type">
   <div class="section-header">
     <h2>Our Services</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -75,6 +75,7 @@
       div {
         height: 300px;
         background-size: cover;
+        transition: all 0.3s ease-in-out;
       }
       li:first-child {
         div {
@@ -104,6 +105,12 @@
       li:nth-child(6) {
         div {
           background-image: url(../assets/servicesPage/img-service6.jpeg);
+        }
+      }
+      li:hover {
+        div {
+          transform: scale(1.05);
+          transition: all 0.3s ease-in-out;
         }
       }
     }
@@ -152,3 +159,21 @@
     }
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".type .section-header", {
+    scrollTrigger: {
+      trigger: ".type",
+      markers: true,
+      start: "top 60%",
+    },
+    x: -300,
+    opacity: 0,
+    duration: 1,
+  });
+</script>

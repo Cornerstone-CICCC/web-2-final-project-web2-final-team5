@@ -6,7 +6,7 @@ import Avatar2 from "../assets/servicesPage/img-avatar2.png";
 import Avatar3 from "../assets/servicesPage/img-avatar3.png";
 ---
 
-<section class="customer">
+<section class="services customer">
   <div class="section-header">
     <h2>Customer testimonials</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -298,6 +298,7 @@ import Avatar3 from "../assets/servicesPage/img-avatar3.png";
 </style>
 
 <script>
+  // Splide
   import Splide from "@splidejs/splide";
   document.addEventListener("DOMContentLoaded", function () {
     new Splide("#image-carousel", {
@@ -308,5 +309,24 @@ import Avatar3 from "../assets/servicesPage/img-avatar3.png";
         },
       },
     }).mount();
+  });
+</script>
+
+<script>
+  // GSAP
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".customer .section-header", {
+    scrollTrigger: {
+      trigger: ".customer",
+      markers: true,
+      start: "top 60%",
+    },
+    x: -300,
+    opacity: 0,
+    duration: 1,
   });
 </script>

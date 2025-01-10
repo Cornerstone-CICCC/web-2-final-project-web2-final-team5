@@ -322,11 +322,22 @@ import Avatar3 from "../assets/servicesPage/img-avatar3.png";
   gsap.from(".customer .section-header", {
     scrollTrigger: {
       trigger: ".customer",
-      markers: true,
+      // markers: true,
       start: "top 60%",
     },
     x: -300,
     opacity: 0,
     duration: 1,
+  });
+
+  gsap.from(".customer .section-contents li", {
+    scrollTrigger: {
+      trigger: ".customer .section-contents",
+      // markers: true,
+      start: "top 70%",
+    },
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
   });
 </script>

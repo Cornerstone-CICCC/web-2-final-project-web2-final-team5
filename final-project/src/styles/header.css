@@ -1,0 +1,21 @@
+.header--scrolled {
+  .header-bottom {
+    position: fixed;
+    height: 80px;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: ease 0.4s;
+    z-index: 50;
+  }
+  main {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .header--scrolled {
+    .header-bottom {
+      height: inherit;
+    }
+  }
+}

@@ -10,10 +10,10 @@ import "../styles/about-modal.css"
 <section class="about-section">
   <div class="top-half">
     <div class="left">
-      <div class="heading-container">
+      <div class="heading-container top-animation">
         <h2>About Us</h2>
       </div>
-      <div class="small-headings">
+      <div class="small-headings top-animation">
         <div class="mission">
           <h4>Our Mission</h4>
           <p>
@@ -43,7 +43,7 @@ import "../styles/about-modal.css"
           </p>
         </div>
       </div>
-      <div class="book-container">
+      <div class="book-container top-animation">
         <button class="book-button">Book Your Appointment Now</button>
         <a href="#" class="learn-more">
           Learn more <span class="arrow"><img src={Arrow.src} alt="arrow" /></span>
@@ -254,6 +254,11 @@ import "../styles/about-modal.css"
 
     .small-headings {
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      margin-top: 1rem;
+    }
+
+    .book-container {
+      margin-top: 2rem;
     }
 
     video {
@@ -307,21 +312,17 @@ import "../styles/about-modal.css"
 
   gsap.registerPlugin(ScrollTrigger)
 
-  const aboutUs = document.querySelector(".heading-container h2")
-  const smallHeadings = document.querySelector(".small-headings")
-  const bookContainer = document.querySelector(".book-container")
+  const topAnimation = document.querySelectorAll(".top-animation")
   const video = document.querySelector(".video-box")
 
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-section",
-      start: "top-=150px top",
+      start: "top-=250px top",
       end: "bottom bottom", 
     }
   })
-  tl.from(aboutUs, {y: -60, opacity: 0, duration: 0.9, delay: 0.2})
-  tl.from(smallHeadings, {y: -60, opacity: 0, duration: 0.9}, "-=0.8")
-  tl.from(bookContainer, {y: -60, opacity: 0, duration: 0.9}, "-=0.8")
+  tl.from(topAnimation, {y: -30, opacity: 0, duration: 0.9, stagger: 0.3, delay: 0.2})
   tl.from(video, {x: "70vw", duration: 0.8, ease: "power4.easeOut"}, "-=0.9")
 
   const bottomHalf = document.querySelector(".bottom-half")
@@ -331,7 +332,7 @@ import "../styles/about-modal.css"
   const tl2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".bottom-half",
-      start: "top-=180px top",
+      start: "top-=260px top",
       end: "bottom bottom",
     }
   })

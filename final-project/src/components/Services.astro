@@ -169,11 +169,23 @@
   gsap.from(".type .section-header", {
     scrollTrigger: {
       trigger: ".type",
-      markers: true,
+      // markers: true,
       start: "top 60%",
     },
     x: -300,
     opacity: 0,
     duration: 1,
+  });
+
+  gsap.from(".type .section-contents li", {
+    scrollTrigger: {
+      trigger: ".type .section-contents",
+      markers: true,
+      start: "top 70%",
+    },
+    y: 300,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
   });
 </script>

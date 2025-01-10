@@ -59,7 +59,7 @@ import "../styles/about-modal.css"
         <img src={PlayIcon.src} alt="play icon">
       </div>
       <div class="play-box play-button">
-        <img src={PlayButton.src} alt="play button">
+        <img src={PlayButton.src} alt="play button" class="play-icon">
       </div>
     </div>
   </div>
@@ -229,6 +229,11 @@ import "../styles/about-modal.css"
     place-items: center;
   }
 
+  .play-icon {
+    cursor: pointer;
+    padding: 25px 37px;
+  }
+
   @media screen and (max-width: 769px) {
     .top-half {
       flex-direction: column;
@@ -265,7 +270,7 @@ import "../styles/about-modal.css"
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const videoBox = document.querySelector(".play-button") as HTMLDivElement
+    const videoBox = document.querySelector(".play-icon") as HTMLImageElement
     const modalVideo = document.querySelector(".video-box video") as HTMLVideoElement
 
     videoBox?.addEventListener("click", (e) => {

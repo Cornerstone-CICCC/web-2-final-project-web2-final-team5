@@ -144,8 +144,8 @@ p {
 .row-form {
     display: flex;
     gap: 80px;
+    flex-wrap: wrap;
 }
-
 
 .col-form {
     width: 100%;
@@ -192,8 +192,6 @@ p {
 .col-form img {
     width: 100%;
     max-width: 616px;
-/*     height: 838px;
-    margin: 112px 64px 112px 0px; */
     height: auto;
     margin: 0 0;
 }
@@ -209,6 +207,7 @@ p {
     width: 100%;
     max-width: 616px;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 .col-data { 
@@ -228,7 +227,7 @@ p {
     text-align: left;
 }
 
-.col-data input[type="text"]{
+.col-data input[type="text"], .col-data input[type="date"]{
     width: 100%;
     max-width: 296px;
     border-radius: 5px;
@@ -237,26 +236,22 @@ p {
     overflow: hidden;
 }
 
-.col-data select {
-    display: block;
+/*Select services*/
+.col-data #services {
     margin-top: 8px;
     border-radius: 5px;
     border: solid 1px #000000;
-    width: 296px;
-}
-
-.col-data input[type="date"]{
     width: 100%;
-    border-radius: 5px;
-    border: solid 1px #000000;
+    max-width: 296px;
     padding: 12px;
 }
 
 /*Message area*/
 .row-message {
     width: 100%;
-    max-width: 616px;
+    max-width: 100%;
     gap: 8px;
+    margin-top: 24px;
 }
 
 .row-message p{
@@ -277,7 +272,8 @@ p {
 }
 
 .row-message textarea::placeholder {
-    width: 592px;
+    width: 100%;
+    max-width: 100%;
     text-align: left;
     font-family: 'Roboto', sans-serif; 
     font-weight: 400; 
@@ -286,44 +282,42 @@ p {
     color: #505050;
 }
 
-/*terms*/
-.row-terms {
-    display: flex;
-    align-items: center;
+ /*terms*/
+.terms {
     margin-top: 24px;
-    margin-bottom: 24px;
-    width: 100%;
-    max-width: 146px;
-    padding-bottom: 16px;
-    gap: 12px;
 }
 
-.terms-label {
+ .terms label {
     display: flex;
     align-items: center;
     font-family: 'Roboto', sans-serif; 
-    font-weight: 400; 
+    font-weight: 400;
     font-size: 14px; 
     line-height: 21px;
-}
+ }
 
-.terms-label input[type="checkbox"] {
-    width: 18px;
-    height: 21px;
-    font-family: 'Roboto', sans-serif;
-    border: 1px solid #000000;
-    margin-right: 8px;
-}
-
-.row-terms a {
-    font-family: 'Roboto', sans-serif; 
-    font-weight: 400; 
-    font-size: 14px; 
-    line-height: 21px;
+ .terms label a {
     text-decoration: underline;
-    color: #000000;
+    color: #000000; 
     margin-left: 1.5px;
-}
+ }
+
+ .terms input[type="checkbox"] {
+    appearance: auto;
+ }
+
+ .inline-checkbox {
+    width: 18px; 
+    height: 18px; 
+    margin-right: 8px; 
+    border: 1px solid #000000; 
+    border-radius: 3px;
+ }
+
+ .inline-checkbox:checked {
+    background-color: #000000;
+    border: 1px solid #000000;
+ }
 
 /*Button*/
 .row-btn button{
@@ -340,7 +334,6 @@ p {
     font-size: 16px; 
     line-height: 24px;
 }
-
 
 /*Media queries*/
 /*Mobile devices*/
@@ -491,6 +484,15 @@ p {
         gap: 32px;
         display: flex;
         justify-content: center;
+    }
+
+    .row-form, .row-data {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .col-data, .row-message, .row-btn {
+        max-width: 100%;
     }
 
     .col-form {

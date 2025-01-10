@@ -32,8 +32,8 @@ import '../styles/contact.css';
     <div class="row row3">
         <!--Email -->
         <div class="col col1">
-            <div class="row row-email">
-                <img src="/src/assets/contact/Email.svg" alt="email icon">
+            <div class="row row-feature">
+                <img class="icon" src="/src/assets/contact/Email.svg" alt="email icon">
                 <h4>Email</h4>
                 <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
                 <a href="mailto:hello@Ddsgnr.io">hello@Ddsgnr.io</a>
@@ -41,8 +41,8 @@ import '../styles/contact.css';
         </div>
         <!--Live chat -->
         <div class="col col1">
-            <div class="row row-chat">
-                <img src="/src/assets/contact/Chat.svg" alt="chat icon">
+            <div class="row row-feature">
+                <img class="icon" src="/src/assets/contact/Chat.svg" alt="chat icon">
                 <h4>Live chat</h4>
                 <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
                 <a href="mailto:hello@Ddsgnr.io">Start new chat</a>
@@ -50,8 +50,8 @@ import '../styles/contact.css';
         </div>
         <!--Phone -->
         <div class="col col1">
-            <div class="row row-phone">
-                <img src="/src/assets/contact/Phone.svg" alt="phone icon">
+            <div class="row row-feature">
+                <img class="icon" src="/src/assets/contact/Phone.svg" alt="phone icon">
                 <h4>Phone</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
                 <a href="tel:+15550000000">+1 (555) 000-0000</a>
@@ -59,8 +59,8 @@ import '../styles/contact.css';
         </div>
         <!--Office -->
         <div class="col col1">
-            <div class="row row-office">
-                <img src="/src/assets/contact/Office.svg" alt="phone office">
+            <div class="row row-feature">
+                <img class="icon" src="/src/assets/contact/Office.svg" alt="phone office">
                 <h4>Office</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
                 <a href="https://maps.app.goo.gl/uhtxQvPK1GatcmgT7">123 Sample St, Sydney NSW 2000 AU</a>
@@ -85,6 +85,7 @@ import '../styles/contact.css';
             </div>
             <!--Contact Form container -->
             <div class="container data-section">
+                <form id="contactForm">
                 <!--First, last name -->
                 <div class="row row-data">
                     <div class="col col-data">
@@ -129,25 +130,33 @@ import '../styles/contact.css';
                 <!--Message -->
                 <div class="row row-message">
                     <p>Message</p>
-                    <textarea name="message" id="message" placeholder="Type your message...">
+                    <textarea rows="10" name="message" id="message" placeholder="Type your message...">
                     </textarea>
                 </div>
                 <!--Accept terms -->
                 <div class="row row-terms">
                     <label for="terms" class="terms-label">
-                        <input id="terms" type="checkbox" required />
+                        <input id="terms" type="checkbox"/>
                         I accept the 
                         <a href="https://example.com/">Terms</a>
                     </label>
                 </div>
                 <!--Submit Button -->
                 <div class="row row-btn">
-                    <button>Submit</button>
+                    <button type="submit">Submit</button>
                 </div>
+                </form>
+
             </div>
         </div>
         <div class="col col-form">
-            <img src="/src/assets/contact/wheel-img.png" alt="wheel img">
+            <div class="container image-section">
+                    <img src="/src/assets/contact/wheel-img.png" alt="wheel img">
+            </div>
         </div>
     </div>
 </div>
+
+<!--Your JS code here -->
+<script src="/js/formContact.js" type="module"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>

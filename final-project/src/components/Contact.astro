@@ -85,6 +85,7 @@ import '../styles/contact.css';
             </div>
             <!--Contact Form container -->
             <div class="container data-section">
+                <form id="contactForm">
                 <!--First, last name -->
                 <div class="row row-data">
                     <div class="col col-data">
@@ -135,15 +136,17 @@ import '../styles/contact.css';
                 <!--Accept terms -->
                 <div class="row row-terms">
                     <label for="terms" class="terms-label">
-                        <input id="terms" type="checkbox" required />
+                        <input id="terms" type="checkbox" required/>
                         I accept the 
                         <a href="https://example.com/">Terms</a>
                     </label>
                 </div>
                 <!--Submit Button -->
                 <div class="row row-btn">
-                    <button>Submit</button>
+                    <button type="submit">Submit</button>
                 </div>
+                </form>
+
             </div>
         </div>
         <div class="col col-form">
@@ -153,3 +156,6 @@ import '../styles/contact.css';
         </div>
     </div>
 </div>
+
+<!--Your JS code here -->
+<script src="/js/formContact.js" type="module"></script>

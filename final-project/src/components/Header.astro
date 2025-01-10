@@ -4,6 +4,7 @@ import IconFacebook from "../assets/footer/icon-facebook.svg";
 import IconInstagram from "../assets/footer/icon-instagram.svg";
 import IconTwitter from "../assets/footer/icon-twitter.svg";
 import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
+import "../styles/header.css";
 ---
 
 <header>
@@ -200,7 +201,7 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     padding: 15px 30px;
   }
   .header--scrolled {
-    .header-bottom {
+    /* .header-bottom {
       position: fixed;
       height: 80px;
       top: 0;
@@ -208,7 +209,7 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
       right: 0;
       transition: ease 0.4s;
       z-index: 50;
-    }
+    } */
   }
 
   .logo {
@@ -385,16 +386,16 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     .mobile-menu::after {
       content: "";
       display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
       background-color: transparent;
       z-index: -1;
       transition: all 0.5s ease-in-out;
     }
     .mobile-menu.open::after {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       display: block;
       z-index: 1;
       background-color: rgba(0, 0, 0, 0.3);
@@ -434,15 +435,15 @@ import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
     ScrollTrigger.create({
       start: "top -55",
       end: 99999,
-      toggleClass: { className: "header--scrolled", targets: "header" },
+      toggleClass: { className: "header--scrolled", targets: "body" },
     });
   });
 
-  // mm.add("(max-width: 768px)", () => {
-  //   // ScrollTrigger.create({
-  //   //   start: "top 0",
-  //   //   end: 99999,
-  //   //   toggleClass: { className: "header--scrolled", targets: "header" },
-  //   // });
-  // });
+  mm.add("(max-width: 768px)", () => {
+    ScrollTrigger.create({
+      start: "top 0",
+      end: 99999,
+      toggleClass: { className: "header--scrolled", targets: "body" },
+    });
+  });
 </script>

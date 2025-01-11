@@ -255,6 +255,7 @@ import "../styles/header.css";
   }
   .header-bottom {
     border-bottom: 1px solid #000;
+    transition: all 0.3s ease;
     .header-bottom__right {
       display: flex;
       align-items: center;
@@ -278,6 +279,10 @@ import "../styles/header.css";
     color: #fff;
     border-radius: 5px;
     padding: 8px 20px;
+  }
+
+  .hidden {
+    transform: translateY(-100%);
   }
 
   @media (max-width: 768px) {
@@ -446,4 +451,31 @@ import "../styles/header.css";
       toggleClass: { className: "header--scrolled", targets: "body" },
     });
   });
+</script>
+
+<script>
+  const header = document.querySelector(".header-bottom") as HTMLDivElement
+  let lastY = window.scrollY
+  const startPoint = 150
+
+  window.addEventListener("scroll", () => {
+    const currentY = window.scrollY
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      if (currentY < lastY) {
+        header.classList.remove("hidden")
+      } else if (currentY > 0) {
+        header.classList.add("hidden")
+      }
+    } else {
+      if (currentY > startPoint) {
+        if (currentY < lastY) {
+          header.classList.remove("hidden")
+        } else if (currentY > 0) {
+          header.classList.add("hidden")
+        }
+      }
+    }
+    lastY = currentY
+  })
 </script>

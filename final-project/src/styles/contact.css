@@ -7,7 +7,7 @@
 }
 
 .intro {
-    padding: 112px 64px;
+    padding: 64px 24px;
 }
 
 .container .intro{
@@ -45,7 +45,7 @@
     margin-top: 112px;
 }
 
-h2 {
+.row1 h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 48px;
@@ -139,6 +139,9 @@ p {
 .form {
     background-color: #F7F7F7;
     padding: 112px 64px;
+    width: 100%;
+    max-width: 100%;
+    gap: 8px;
 }
 
 .row-form {
@@ -212,7 +215,7 @@ p {
 
 .col-data { 
     width: 100%;
-    max-width: 296px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -225,11 +228,12 @@ p {
     font-size: 16px;
     line-height: 24px;
     text-align: left;
+    width: 100%;
+    max-width: 100%;
 }
 
 .col-data input[type="text"], .col-data input[type="date"]{
     width: 100%;
-    max-width: 296px;
     border-radius: 5px;
     border: solid 1px #000000;
     padding: 12px;
@@ -237,12 +241,12 @@ p {
 }
 
 /*Select services*/
-.col-data #services {
+.col-data select {
     margin-top: 8px;
     border-radius: 5px;
     border: solid 1px #000000;
     width: 100%;
-    max-width: 296px;
+    max-width: 100%;
     padding: 12px;
 }
 
@@ -252,6 +256,11 @@ p {
     max-width: 100%;
     gap: 8px;
     margin-top: 24px;
+}
+
+.row .row-message {
+    width: 100%;
+    max-width: 100%;
 }
 
 .row-message p{
@@ -335,6 +344,26 @@ p {
     line-height: 24px;
 }
 
+/*Contact Form Toast Styling*/
+#messageContainer {
+    background-color: aqua;
+}
+
+.success-message { 
+    color: green; 
+    padding: 30px; 
+    border: 2px solid green; 
+    margin: 10px 0; 
+    background-color: #f0fff0; 
+} 
+.error-message { 
+    color: red; 
+    padding: 30px; 
+    border: 2px solid red; 
+    margin: 10px 0; 
+    background-color: #fff0f0;
+}
+
 /*Media queries*/
 /*Mobile devices*/
 @media (max-width: 767px) {
@@ -356,8 +385,8 @@ p {
         max-width: 100%;
     }
 
-    h2 {
-        font-size: 24px;
+    .row1 h2 {
+        font-size: 32px;
         line-height: 30px;
     }
 
@@ -390,6 +419,10 @@ p {
     }
 
     /*Form Container*/
+    .form {
+        padding: 64px 24px;
+    }
+
     .container .form {
         padding: 32px 16px;
         display: flex;
@@ -398,18 +431,13 @@ p {
     .row-form {
         flex-direction: column;
         gap: 16px;
-        padding: 32px 16px;
+        padding: 32px 0px;
         justify-content: center;
     }
 
     .col-form {
         max-width: 100%;
         margin: 32px 0;
-    }
-
-    .title-section,
-    .data-section {
-        padding:0 64px;
     }
 
     .title-section,
@@ -426,8 +454,8 @@ p {
         line-height: 20px;
     }
 
-    h2 {
-        font-size: 24px;
+    .row-title-section h2 {
+        font-size: 32px;
         line-height: 30px;
     }
 

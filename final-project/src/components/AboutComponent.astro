@@ -306,22 +306,7 @@ import "../styles/about-modal.css"
 
   gsap.registerPlugin(ScrollTrigger)
 
-  const aboutUs = document.querySelector(".heading-container h2")
-  const smallHeadings = document.querySelector(".small-headings")
-  const bookContainer = document.querySelector(".book-container")
-  const video = document.querySelector(".video-box")
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".about-section",
-      start: "top-=150px top",
-      end: "bottom bottom", 
-    }
-  })
-  tl.from(aboutUs, {y: -60, opacity: 0, duration: 0.9, delay: 0.2})
-  tl.from(smallHeadings, {y: -60, opacity: 0, duration: 0.9}, "-=0.8")
-  tl.from(bookContainer, {y: -60, opacity: 0, duration: 0.9}, "-=0.8")
-  tl.from(video, {x: "70vw", duration: 0.8, ease: "power4.easeOut"}, "-=0.9")
+  
 
   const bottomHalf = document.querySelector(".bottom-half")
   const bottomImage = document.querySelector(".bottom-half .left")

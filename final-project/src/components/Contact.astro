@@ -144,17 +144,58 @@ import '../styles/contact.css';
                     <button type="submit">Submit</button>
                 </div>
                 </form>
-
+                <div id="messageContainer"></div>
             </div>
         </div>
         <div class="col col-form">
             <div class="container image-section">
                     <img src="/src/assets/contact/wheel-img.png" alt="wheel img">
             </div>
-    </div>
+        </div>
 </div>
 </div>
 
 <!--Your JS code here -->
-<script src="/js/formContact.js" type="module"></script>
+<script type="module" src="/public/js/formContact.js"></script>
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    //Contact Us - Main title
+    gsap.from(".row-title", {
+    scrollTrigger: {
+      trigger: ".type",
+      // markers: true,
+      start: "top 60%",
+    },
+    x: -300,
+    opacity: 0,
+    duration: 1,
+  });
+
+
+  //Contact Us - Form
+  gsap.from(".title-section", {
+    scrollTrigger: {
+      trigger: ".type",
+      // markers: true,
+      start: "top 60%",
+    },
+    x: -300,
+    opacity: 0,
+    duration: 1,
+  });
+
+    gsap.to("#messageContainer", { 
+        x: 200,
+        duration: 2,
+        backgroundColor: '#8d3dae', 
+    })
+
+</script>
+

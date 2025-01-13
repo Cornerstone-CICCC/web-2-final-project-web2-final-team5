@@ -1,5 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import About from "../components/AboutComponent.astro";
+import ServiceCompany from "../components/ServicesCompany.astro";
+import ServiceType from "../components/Services.astro";
+import Contact from "../components/Contact.astro";
+import Team from "../components/Team.astro";
+import ServiceCustomer from "../components/ServicesCustomer.astro";
+import Faq from "../components/Faq.astro";
 ---
 
-<Layout />
+<Layout pageTitle={"Home | Ddsgnr"} pageDesc={"This is main page of Ddsgnr"}>
+  <main>
+    <Top />
+    <About />
+    <ServiceCompany />
+    <ServiceType />
+    <Contact />
+    <Team />
+    <ServiceCustomer />
+    <Faq />
+  </main>
+</Layout>

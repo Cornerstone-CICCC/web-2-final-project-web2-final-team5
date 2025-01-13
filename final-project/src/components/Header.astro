@@ -78,19 +78,16 @@ import "../styles/header.css";
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/About">About</a>
+          <a href="/service">Services</a>
         </li>
         <li>
-          <a href="/Services">Services</a>
+          <a href="/about-us">About</a>
         </li>
         <li>
-          <a href="#">Shop</a>
-        </li>
-        <li>
-          <a href="/Contact">Contacts</a>
+          <a href="/contact-us">Contact</a>
         </li>
       </ul>
-      <a href="/Contact" class="link-button">Book Your Appointment Now</a>
+      <a href="/contact" class="link-button">Book Your Appointment Now</a>
     </div>
     <div class="mobile-menu">
       <input type="checkbox" id="menu-checkbox" />
@@ -105,16 +102,13 @@ import "../styles/header.css";
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/About">About</a>
+            <a href="/service">Services</a>
           </li>
           <li>
-            <a href="/Services">Services</a>
+            <a href="/about-us">About</a>
           </li>
           <li>
-            <a href="#">Shop</a>
-          </li>
-          <li>
-            <a href="/Contact">Contacts</a>
+            <a href="/contact-us">Contact</a>
           </li>
         </ul>
         <div class="other-list">
@@ -454,28 +448,28 @@ import "../styles/header.css";
 </script>
 
 <script>
-  const header = document.querySelector(".header-bottom") as HTMLDivElement
-  let lastY = window.scrollY
-  const startPoint = 150
+  const header = document.querySelector(".header-bottom") as HTMLDivElement;
+  let lastY = window.scrollY;
+  const startPoint = 150;
 
   window.addEventListener("scroll", () => {
-    const currentY = window.scrollY
+    const currentY = window.scrollY;
 
     if (window.matchMedia("(max-width: 768px)").matches) {
       if (currentY < lastY) {
-        header.classList.remove("hidden")
+        header.classList.remove("hidden");
       } else if (currentY > 0) {
-        header.classList.add("hidden")
+        header.classList.add("hidden");
       }
     } else {
       if (currentY > startPoint) {
         if (currentY < lastY) {
-          header.classList.remove("hidden")
+          header.classList.remove("hidden");
         } else if (currentY > 0) {
-          header.classList.add("hidden")
+          header.classList.add("hidden");
         }
       }
     }
-    lastY = currentY
-  })
+    lastY = currentY;
+  });
 </script>

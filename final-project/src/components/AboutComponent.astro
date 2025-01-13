@@ -5,8 +5,9 @@ import Thumbnail from "../assets/about-images/about-thumbnail.png";
 import SampleVideo from "../assets/about-images/page-showcase.mp4";
 import PlayButton from "../assets/about-images/play-button.svg";
 import PlayIcon from "../assets/about-images/play-icon.svg";
-import "../styles/about-modal.css"
+import "../styles/about-modal.css";
 ---
+
 <section class="about-section">
   <div class="top-half">
     <div class="left">
@@ -18,36 +19,38 @@ import "../styles/about-modal.css"
           <div class="mission">
             <h4>Our Mission</h4>
             <p>
-              At Ddsgnr Auto Repair, our mission is to provide our customers with
-              the highest level of car care and customer service.
+              At Ddsgnr Auto Repair, our mission is to provide our customers
+              with the highest level of car care and customer service.
             </p>
           </div>
           <div class="expertise">
             <h4>Our Expertise</h4>
             <p>
-              At Ddsgnr Auto Repair, our technicians are the heart and soul of our
-              business. With years of experience and training,
+              At Ddsgnr Auto Repair, our technicians are the heart and soul of
+              our business. With years of experience and training,
             </p>
           </div>
           <div class="equipment">
             <h4>Our Equipment</h4>
             <p>
-              At Ddsgnr Auto Repair, our technicians are the heart and soul of our
-              business. With years of experience and training,
+              At Ddsgnr Auto Repair, our technicians are the heart and soul of
+              our business. With years of experience and training,
             </p>
           </div>
           <div class="customer-promise">
             <h4>Our Customer Promise</h4>
             <p>
-              At Ddsgnr Auto Repair, our mission is to provide our customers with
-              the highest level of car care and customer service.
+              At Ddsgnr Auto Repair, our mission is to provide our customers
+              with the highest level of car care and customer service.
             </p>
           </div>
         </div>
         <div class="book-container top-animation">
           <button class="book-button">Book Your Appointment Now</button>
           <a href="#" class="learn-more">
-            Learn more <span class="arrow"><img src={Arrow.src} alt="arrow" /></span>
+            Learn more <span class="arrow"
+              ><img src={Arrow.src} alt="arrow" /></span
+            >
           </a>
         </div>
       </div>
@@ -58,10 +61,10 @@ import "../styles/about-modal.css"
         Your browser does not support the video tag.
       </video>
       <div class="play-box">
-        <img src={PlayIcon.src} alt="play icon">
+        <img src={PlayIcon.src} alt="play icon" />
       </div>
       <div class="play-box play-button">
-        <img src={PlayButton.src} alt="play button" class="play-icon">
+        <img src={PlayButton.src} alt="play button" class="play-icon" />
       </div>
     </div>
   </div>
@@ -247,7 +250,7 @@ import "../styles/about-modal.css"
     .about-section {
       margin-top: 5rem;
     }
-    
+
     .top-half {
       flex-direction: column;
       height: 100%;
@@ -288,68 +291,72 @@ import "../styles/about-modal.css"
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const videoBox = document.querySelector(".play-icon") as HTMLImageElement
-    const modalVideo = document.querySelector(".video-box video") as HTMLVideoElement
+    const videoBox = document.querySelector(".play-icon") as HTMLImageElement;
+    const modalVideo = document.querySelector(
+      ".video-box video"
+    ) as HTMLVideoElement;
 
     videoBox?.addEventListener("click", (e) => {
       e.stopPropagation();
-      const prevOverlay = document.querySelector(".overlay") as HTMLDivElement
+      const prevOverlay = document.querySelector(".overlay") as HTMLDivElement;
       if (prevOverlay) {
-        prevOverlay.remove()
+        prevOverlay.remove();
       }
-      const overlay = document.createElement("div")
-      const modal = document.createElement("div")
-      const videoClone = modalVideo.cloneNode(true) as HTMLVideoElement
-      overlay.classList.add("overlay")
-      modal.classList.add("modal")
-      videoClone.classList.add("modal-video")
-      videoClone.setAttribute("controls", "true")
-      videoClone.removeAttribute("poster")
-      modal.appendChild(videoClone)
-      overlay.appendChild(modal)
-      document.body.appendChild(overlay)
-    })
+      const overlay = document.createElement("div");
+      const modal = document.createElement("div");
+      const videoClone = modalVideo.cloneNode(true) as HTMLVideoElement;
+      overlay.classList.add("overlay");
+      modal.classList.add("modal");
+      videoClone.classList.add("modal-video");
+      videoClone.setAttribute("controls", "true");
+      videoClone.removeAttribute("poster");
+      modal.appendChild(videoClone);
+      overlay.appendChild(modal);
+      document.body.appendChild(overlay);
+    });
 
     document.addEventListener("click", function (e) {
-      const currOverlay = document.querySelector(".overlay") as HTMLDivElement
+      const currOverlay = document.querySelector(".overlay") as HTMLDivElement;
       if (currOverlay && !(e.target as HTMLElement).closest(".modal")) {
-          currOverlay.remove()
+        currOverlay.remove();
       }
-    })
-  })
+    });
+  });
 
-  import {gsap} from 'gsap'
-  import {ScrollTrigger} from 'gsap/ScrollTrigger'
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 
-<<<<<<< HEAD
-  
-=======
-  const topAnimation = document.querySelectorAll(".top-animation")
-  const video = document.querySelector(".video-box")
+  const topAnimation = document.querySelectorAll(".top-animation");
+  const video = document.querySelector(".video-box");
 
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-section",
       start: "top-=250px top",
-      end: "bottom bottom", 
-    }
-  })
-  tl.from(topAnimation, {y: -30, opacity: 0, duration: 0.9, stagger: 0.3, delay: 0.2})
-  tl.from(video, {x: "70vw", duration: 0.8, ease: "power4.easeOut"}, "-=0.9")
->>>>>>> fc7107d0bce2a8f7cdf3eaa3474d957db62c97f0
+      end: "bottom bottom",
+    },
+  });
+  tl.from(topAnimation, {
+    y: -30,
+    opacity: 0,
+    duration: 0.9,
+    stagger: 0.3,
+    delay: 0.2,
+  });
+  tl.from(video, { x: "70vw", duration: 0.8, ease: "power4.easeOut" }, "-=0.9");
 
-  const bottomImage = document.querySelector(".bottom-half .left")
-  const ourMission = document.querySelector(".bottom-half .right")
+  const bottomImage = document.querySelector(".bottom-half .left");
+  const ourMission = document.querySelector(".bottom-half .right");
 
   const tl2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".bottom-half",
       start: "top-=260px top",
       end: "bottom bottom",
-    }
-  })
-  tl2.from(bottomImage, {y: -50, opacity: 0, duration: 1})
-  tl2.from(ourMission, {rotationY: 90, duration: 0.9}, "-=0.6")
+    },
+  });
+  tl2.from(bottomImage, { y: -50, opacity: 0, duration: 1 });
+  tl2.from(ourMission, { rotationY: 90, duration: 0.9 }, "-=0.6");
 </script>

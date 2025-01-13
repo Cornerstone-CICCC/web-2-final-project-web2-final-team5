@@ -1,0 +1,637 @@
+/*Title*/
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    gap: 80px;
+}
+
+.intro {
+    padding: 64px 24px;
+}
+
+.container .intro{
+    width: 100%;
+    max-width: 1440px;
+    padding: 112px 64px;
+    gap: 80px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 768px;
+    height: 109px;
+    gap: 16px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row-title {
+    margin-bottom: 80px;
+}
+
+.row1 {
+    width: 100%;
+    max-width: 233px;
+    margin-bottom: 24px;
+    margin-top: 112px;
+}
+
+.row1 h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57.6px;
+    color: #000000;
+}
+
+.row2 {
+    width: 100%;
+    max-width: 444px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+/*Features*/
+.row3 {
+    display: flex;
+    width: 100%;
+    max-width: 1312px;
+    gap: 32px;
+    margin:0 64px 112px 64px;
+/*     margin: 0 auto 112px auto; */
+    padding: 0;
+}
+
+.row3 .col {
+    display: grid;
+    flex: 1;
+    width: 100%;
+    max-width: 304px;
+    gap: 24px;
+}
+
+.col1 h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 16px;
+}
+
+.col1 p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+.col1 a {
+    text-decoration: underline;
+    font-style: solid;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.col a:active {
+    color: #000000;
+}
+
+/*Icons*/
+.icon {
+    width: 100%;
+    max-width: 40px;
+    height: 32px;
+    margin: 8px 0px 24px 4px;
+}
+
+.row-feature {
+    margin-top: 80px;
+}
+
+
+/*Form Container*/
+.container .form{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 64px;
+    margin: 0 auto;
+    gap: 80px;
+}
+
+.form {
+    background-color: #F7F7F7;
+    padding: 112px 64px;
+    width: 100%;
+    max-width: 100%;
+    gap: 8px;
+}
+
+.row-form {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.col-form {
+    width: 100%;
+    max-width: 616px;
+    gap: 32px;
+}
+
+.title-section {
+    width: 100%;
+    max-width: 616px;
+    gap: 16px;
+}
+
+.row-title-section #tagline{
+    width: 100%;
+    max-width: 53px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.row-title-section h2 {
+    width: 100%;
+    max-width: 233px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57.6px;
+    margin-bottom: 24px;
+}
+
+.row-title-section #paragraph {
+    width: 100%;
+    max-width: 444px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.col-form img {
+    width: 100%;
+    max-width: 616px;
+    height: auto;
+    margin: 0 0;
+}
+
+/*Contact Form Container*/
+.data-section {
+    width: 100%;
+    max-width: 616px;
+    gap: 24px;
+}
+.row-data {
+    display: flex;
+    width: 100%;
+    max-width: 616px;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.col-data { 
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.col-data p, .col-data label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+}
+
+.col-data input[type="text"], .col-data input[type="date"]{
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px #000000;
+    padding: 12px;
+    overflow: hidden;
+}
+
+/*Select services*/
+.col-data select {
+    margin-top: 8px;
+    border-radius: 5px;
+    border: solid 1px #000000;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+}
+
+/*Message area*/
+.row-message {
+    width: 100%;
+    max-width: 100%;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.row .row-message {
+    width: 100%;
+    max-width: 100%;
+}
+
+.row-message p{
+    width: 100%;
+    max-width: 616px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.row-message textarea {
+    width: 100%;
+    max-width: 616px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 12px;
+}
+
+.row-message textarea::placeholder {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400; 
+    font-size: 16px; 
+    line-height: 24px; 
+    color: #505050;
+}
+
+ /*terms*/
+.terms {
+    margin-top: 24px;
+}
+
+ .terms label {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+    font-size: 14px; 
+    line-height: 21px;
+ }
+
+ .terms label a {
+    text-decoration: underline;
+    color: #000000; 
+    margin-left: 1.5px;
+ }
+
+ .terms input[type="checkbox"] {
+    appearance: auto;
+ }
+
+ .inline-checkbox {
+    width: 18px; 
+    height: 18px; 
+    margin-right: 8px; 
+    border: 1px solid #000000; 
+    border-radius: 3px;
+ }
+
+ .inline-checkbox:checked {
+    background-color: #000000;
+    border: 1px solid #000000;
+ }
+
+/*Button*/
+.row-btn button{
+    width: 100%;
+    max-width: 99px;
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin-top: 24px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400; 
+    font-size: 16px; 
+    line-height: 24px;
+}
+
+/*Contact Form Toast Styling*/
+#messageContainer {
+    background-color: aqua;
+}
+
+.success-message { 
+    color: green; 
+    padding: 30px; 
+    border: 2px solid green; 
+    margin: 10px 0; 
+    background-color: #f0fff0; 
+} 
+.error-message { 
+    color: red; 
+    padding: 30px; 
+    border: 2px solid red; 
+    margin: 10px 0; 
+    background-color: #fff0f0;
+}
+
+/*Media queries*/
+/*Mobile devices*/
+@media (max-width: 767px) {
+    
+    /*Contact Us Container*/
+    .container .intro {
+        padding: 32px 16px;
+        margin: 0;
+    }
+
+    .title {
+        width: 100%;
+        max-width: 100%;
+        gap: 8px;
+    }
+
+    .row1,
+    .row2 {
+        max-width: 100%;
+    }
+
+    .row1 h2 {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .row3 {
+        flex-direction: column;
+        margin: 0 16px 32px 16px;
+    }
+
+    .row3 .col {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        gap: 16px;
+    }
+
+    .col1 h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .col1 p,
+    .col1 a {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    /*Form Container*/
+    .form {
+        padding: 64px 24px;
+    }
+
+    .container .form {
+        padding: 32px 16px;
+        display: flex;
+    }
+
+    .row-form {
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px 0px;
+        justify-content: center;
+    }
+
+    .col-form {
+        max-width: 100%;
+        margin: 32px 0;
+    }
+
+    .title-section,
+    .data-section,
+    .row-message,
+    .row-terms,
+    .row-btn {
+        max-width: 100%;
+        gap: 16px;
+    }
+
+    #tagline, h2, #paragraph, p, label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .row-title-section h2 {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .col-data input[type="text"],
+    .col-data select,
+    .col-data input[type="date"],
+    .row-message textarea {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .image-section {
+        padding:0 64px;
+    }
+
+    .image-section img {
+        display: none;
+    }
+}
+
+/* Tablet devices */ 
+@media (min-width: 768px) and (max-width: 1023px) { 
+    /*Contact Us Container*/
+    .container .intro { 
+        padding: 64px 32px; 
+    } 
+    .title { 
+        width: 100%; 
+        max-width: 80%; 
+        height: auto; 
+        gap: 12px; 
+    } 
+    .row3 { 
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        margin: 0 32px 64px 32px; 
+    } 
+    .row3 .col { 
+        width: 48%; 
+        max-width: 48%; 
+        height: auto; 
+        gap: 20px; 
+    }
+
+    /*Form Container*/
+    .container .form {
+        padding: 64px 32px;
+    }
+
+    .row-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .row-form, .row-data {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .col-data, .row-message, .row-btn {
+        max-width: 100%;
+    }
+
+    .col-form {
+        width: 100%;
+        max-width: 100%;
+        margin: 64px 0;
+    }
+
+    .title-section,
+    .data-section,
+    .row-message,
+    .row-terms,
+    .row-btn {
+        max-width: 80%;
+        gap: 20px;
+    }
+
+    .col-data input[type="text"],
+    .col-data select,
+    .col-data input[type="date"],
+    .row-message textarea {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-section {
+        padding:0 64px;
+    }
+
+    .image-section img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 32px 0;
+    }
+}
+
+/* Desktop devices */ 
+@media (min-width: 1024px) and (max-width: 1083px) { 
+    /*Contact Us Container*/
+    .container .intro { 
+        padding: 112px 64px; 
+    } 
+    
+    .title { 
+        width: 100%; 
+        max-width: 768px; 
+        gap: 16px; 
+    } 
+
+    .row1 {
+        margin-top: 112px;
+    }
+    .row3 { 
+        flex-direction: row; 
+        flex-wrap: nowrap; 
+        margin: 0 64px 112px 64px; 
+    } 
+    .row3 .col { 
+        width: 100%; 
+        max-width: 304px; 
+        gap: 24px; 
+    }
+    
+    /*Form Container*/
+    .container .form {
+        padding: 112px 64px;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 100%;
+        background-color: #F7F7F7;
+    }
+
+    .row-form {
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .col-form {
+        width: 100%;
+        max-width: 616px;
+        margin: 112px 0px 112px 64px;
+    }
+
+    .title-section,
+    .data-section,
+    .row-message,
+    .row-terms,
+    .row-btn {
+        max-width: 616px;
+        gap: 24px;
+    }
+
+    .col-data input[type="text"],
+    .col-data select,
+    .col-data input[type="date"],
+    .row-message textarea {
+        width: 100%;
+    }
+
+    .image-section {
+        padding:0 64px;
+    }
+
+    .image-section img {
+        width: 100%;
+        max-width: 616px;
+        height: 838px;
+        margin: 112px 64px 112px 0px;
+    }
+}

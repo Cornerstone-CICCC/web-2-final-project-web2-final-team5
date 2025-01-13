@@ -1,0 +1,191 @@
+<section class="services type">
+  <div class="section-header">
+    <h2>Our Services</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="section-contents">
+    <ul>
+      <li>
+        <div>
+          <p>Engine services</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Air conditioning</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Engine services</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Engine management</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Steering</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Wheel</p>
+        </div>
+      </li>
+    </ul>
+    <button class="link-button">View more</button>
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 112px 30px;
+    background-color: #f7f7f7;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    h2 {
+      font-size: 48px;
+      line-height: 57px;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+  .section-contents {
+    ul {
+      /* display: flex;
+      flex-wrap: wrap; */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      /* li {
+        width: 33.33%;
+      } */
+      img {
+        max-width: 100%;
+        width: auto;
+      }
+      div {
+        height: 300px;
+        background-size: cover;
+        transition: all 0.3s ease-in-out;
+      }
+      li:first-child {
+        div {
+          background-image: url(../assets/servicesPage/img-service1.png);
+        }
+      }
+      li:nth-child(2) {
+        div {
+          background-image: url(../assets/servicesPage/img-service2.png);
+        }
+      }
+      li:nth-child(3) {
+        div {
+          background-image: url(../assets/servicesPage/img-service3.jpeg);
+        }
+      }
+      li:nth-child(4) {
+        div {
+          background-image: url(../assets/servicesPage/img-service4.jpeg);
+        }
+      }
+      li:nth-child(5) {
+        div {
+          background-image: url(../assets/servicesPage/img-service5.jpeg);
+        }
+      }
+      li:nth-child(6) {
+        div {
+          background-image: url(../assets/servicesPage/img-service6.jpeg);
+        }
+      }
+      li:hover {
+        div {
+          transform: scale(1.05);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+    div {
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      p {
+        position: absolute;
+        color: #fff;
+        font-size: 24px;
+        left: 10px;
+        bottom: 20px;
+      }
+    }
+  }
+  .link-button {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    section {
+      padding: 48px 24px;
+    }
+    .section-header {
+      text-align: left;
+      margin-bottom: 48px;
+      h2 {
+        font-size: 32px;
+        line-height: 1.3;
+      }
+    }
+    .section-contents ul {
+      margin-bottom: 48px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    li:nth-child(3) ~ li {
+      display: none;
+    }
+    .link-button {
+      display: block;
+      font-size: 16px;
+      width: 100%;
+      padding: 12px 24px;
+      border-radius: 5px;
+      border: 1px solid #000;
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".type .section-header", {
+    scrollTrigger: {
+      trigger: ".type",
+      // markers: true,
+      start: "top 60%",
+    },
+    y: -50,
+    opacity: 0,
+    duration: 1,
+  });
+
+  gsap.from(".type .section-contents li", {
+    scrollTrigger: {
+      trigger: ".type .section-contents",
+      // markers: true,
+      start: "top 70%",
+    },
+    y: 300,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+  });
+</script>

@@ -1,0 +1,160 @@
+---
+import Logo from "../assets/logo.svg";
+import IconFacebook from "../assets/footer/icon-facebook.svg";
+import IconInstagram from "../assets/footer/icon-instagram.svg";
+import IconTwitter from "../assets/footer/icon-twitter.svg";
+import IconLinkedIn from "../assets/footer/icon-linkedIn.svg";
+---
+
+<footer>
+  <div class="footer-top">
+    <div class="logo">
+      <img src={Logo.src} alt="Ddsgnr logo" />
+      <span>Ddsgnr</span>
+    </div>
+    <ul class="menu">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/service">Services</a>
+      </li>
+      <li>
+        <a href="/about-us">About</a>
+      </li>
+      <li>
+        <a href="#">Cars</a>
+      </li>
+      <li>
+        <a href="/contact-us">Contact</a>
+      </li>
+    </ul>
+    <div class="socials">
+      <ul>
+        <li>
+          <a href="#">
+            <img
+              src={IconFacebook.src}
+              width="24"
+              height="24"
+              alt="facebook icon"
+            />
+            <span class="a11y-hidden">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src={IconInstagram.src}
+              width="24"
+              height="24"
+              alt="Instagram icon"
+            />
+            <span class="a11y-hidden">Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src={IconTwitter.src}
+              width="24"
+              height="24"
+              alt="Twitter icon"
+            />
+            <span class="a11y-hidden">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src={IconLinkedIn.src}
+              width="24"
+              height="24"
+              alt="Linkedin icon"
+            />
+            <span class="a11y-hidden">Linkedin</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>2023 Ddsgnr. All right reserved.</p>
+    <ul>
+      <li>
+        <a href="#">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="#">Terms of Service</a>
+      </li>
+      <li>
+        <a href="#">Cookies Settings</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 30px;
+  }
+  ul {
+    display: flex;
+  }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    .menu {
+      gap: 24px;
+    }
+    .socials ul {
+      gap: 12px;
+    }
+    a {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #000;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  .footer-bottom {
+    border-top: 1px solid black;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 21px;
+    ul {
+      gap: 16px;
+    }
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
+  }
+  @media (max-width: 768px) {
+    footer {
+      padding: 48px 24px;
+    }
+    .footer-top,
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
+    .footer-top .menu {
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+</style>

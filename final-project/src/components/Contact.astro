@@ -1,0 +1,201 @@
+---
+import '../styles/contact.css';
+---
+
+<!--Intro Contact Container -->
+<div class="container intro">
+    <!--Title -->
+    <div class="row row-title">
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <div class="title">
+                <div class="col">
+                    <div class="row row1">
+                        <h2>Contact us</h2>
+                    </div>
+                    <div class="row row2">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+
+    <!--Features -->
+    <div class="row row3">
+        <!--Email -->
+        <div class="col col1">
+            <div class="row row-feature">
+                <img class="icon" src="/src/assets/contact/Email.svg" alt="email icon">
+                <h4>Email</h4>
+                <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
+                <a href="mailto:hello@Ddsgnr.io">hello@Ddsgnr.io</a>
+            </div>
+        </div>
+        <!--Live chat -->
+        <div class="col col1">
+            <div class="row row-feature">
+                <img class="icon" src="/src/assets/contact/Chat.svg" alt="chat icon">
+                <h4>Live chat</h4>
+                <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
+                <a href="mailto:hello@Ddsgnr.io">Start new chat</a>
+            </div>
+        </div>
+        <!--Phone -->
+        <div class="col col1">
+            <div class="row row-feature">
+                <img class="icon" src="/src/assets/contact/Phone.svg" alt="phone icon">
+                <h4>Phone</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
+                <a href="tel:+15550000000">+1 (555) 000-0000</a>
+            </div>
+        </div>
+        <!--Office -->
+        <div class="col col1">
+            <div class="row row-feature">
+                <img class="icon" src="/src/assets/contact/Office.svg" alt="phone office">
+                <h4>Office</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
+                <a href="https://maps.app.goo.gl/uhtxQvPK1GatcmgT7">123 Sample St, Sydney NSW 2000 AU</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr/>
+
+<!--Form Container -->
+<div class="container form">
+    <div class="row row-form">
+        <div class="col col-form">
+            <!--Title container -->
+            <div class="container title-section">
+                <div class="row row-title-section">
+                    <p id="tagline">Tagline</p>
+                    <h2>Contact us</h2>
+                    <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </div>
+            </div>
+            <!--Contact Form container -->
+            <div class="container data-section">
+                <form id="contactForm">
+                <!--First, last name -->
+                <div class="row row-data">
+                    <div class="col col-data">
+                        <p>First name</p>
+                        <input required id="first-name" type="text" name="first-name">
+                    </div>
+                    <div class="col col-data">
+                        <p>Last name</p>
+                        <input required id="last-name" type="text" name="last-name">
+                    </div>
+                </div>
+                <!--Phone, email -->
+                <div class="row row-data">
+                    <div class="col col-data">
+                        <p>Phone number</p>
+                        <input required id="phone" type="text" name="phone">
+                    </div>
+                    <div class="col col-data">
+                        <p>Email</p>
+                        <input required id="email" type="text" name="email">
+                    </div>
+                </div>
+                <!--Services -->
+                <div class="row row-data">
+                    <div class="col col-data">
+                        <label for="services">Select service
+                            <select id="services" name="options">
+                                <option value="">(select one)</option>
+                                <option value="1">Engine Services</option>
+                                <option value="2">Air Conditioning</option>
+                                <option value="3">Engine management</option>
+                                <option value="4">Steering</option>
+                                <option value="5">Wheel</option>
+                            </select>
+                          </label>
+                    </div>
+                    <div class="col col-data">
+                        <p>Appointment date</p>
+                        <input type="date" id="appointmentDate" name="appointmentDate">
+                    </div>
+                </div>
+                <!--Message -->
+                <div class="row row-message">
+                    <p>Message</p>
+                    <textarea rows="10" name="message" id="message" placeholder="Type your message...">
+                    </textarea>
+                </div>
+                <!--Accept terms -->
+                <div class="terms">
+                    <label for="terms-and-conditions">
+                        <input class="inline-checkbox" id="terms-and-conditions" type="checkbox" required />I accept the <a href="https://www.example.com">terms and conditions</a>
+                    </label>
+                </div>
+                <!--Submit Button -->
+                <div class="row row-btn">
+                    <button type="submit">Submit</button>
+                </div>
+                </form>
+                <div id="messageContainer"></div>
+            </div>
+        </div>
+        <div class="col col-form">
+            <div class="container image-section">
+                    <img src="/src/assets/contact/wheel-img.png" alt="wheel img">
+            </div>
+        </div>
+</div>
+</div>
+
+<!--Your JS code here -->
+<script type="module" src="/public/js/formContact.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    //Contact Us - Main title
+    gsap.from(".row-title", {
+    scrollTrigger: {
+      trigger: ".type",
+      // markers: true,
+      start: "top 60%",
+    },
+    x: -300,
+    opacity: 0,
+    duration: 1,
+  });
+
+
+  //Contact Us - Form
+  gsap.from(".title-section", {
+    scrollTrigger: {
+      trigger: ".type",
+      // markers: true,
+      start: "top 60%",
+    },
+    x: -300,
+    opacity: 0,
+    duration: 1,
+  });
+
+    gsap.to("#messageContainer", { 
+        x: 200,
+        duration: 2,
+        backgroundColor: '#8d3dae', 
+    })
+
+</script>
+

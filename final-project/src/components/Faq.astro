@@ -1,0 +1,324 @@
+<section class="faq">
+  <div class="section-header">
+    <h2>FAQ</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      varius enim in eros elementum tristique.
+    </p>
+  </div>
+  <div class="section-contents">
+    <div class="faq-accordion">
+      <ul>
+        <li>
+          <div class="accordion-header">
+            <button type="button">Question text goes here</button>
+          </div>
+          <div class="accordion-detail">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+              enim in eros elementum tristique.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="accordion-header">
+            <button type="button">Question text goes here</button>
+          </div>
+          <div class="accordion-detail">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+              enim in eros elementum tristique.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="accordion-header">
+            <button type="button">Question text goes here</button>
+          </div>
+          <div class="accordion-detail">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+              enim in eros elementum tristique.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="accordion-header">
+            <button type="button">Question text goes here</button>
+          </div>
+          <div class="accordion-detail">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+              enim in eros elementum tristique.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="accordion-header">
+            <button type="button">Question text goes here</button>
+          </div>
+          <div class="accordion-detail">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+              enim in eros elementum tristique.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="additional-box">
+      <p class="additional-title">Still have a question?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#" class="link-button">Contact</a>
+    </div>
+  </div>
+</section>
+<section class="gray ad">
+  <div class="inner-section">
+    <strong>Your Automotive Repair & Maintenance Service Specialist</strong>
+    <h2>SCHEDULE YOUR APPOINTMENT <br />TODAY CALL: 299-485-488</h2>
+    <p class="">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+      ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    </p>
+    <div class="buttons-box">
+      <a href="#" class="link-button">Book Appointment Now</a>
+      <a href="#" class="link-text">Learn more</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const accordionButtons = document.querySelectorAll(".accordion-header");
+
+  const handleAccordion = (e) => {
+    e.preventDefault();
+    const target = e.currentTarget;
+    const targetDetail = target.nextElementSibling;
+
+    if (target.classList.contains("open")) {
+      targetDetail.style.maxHeight = null;
+      target.classList.remove("open");
+      targetDetail.classList.remove("open");
+    } else {
+      targetDetail.style.maxHeight = targetDetail.scrollHeight + 40 + "px";
+      target.classList.add("open");
+      targetDetail.classList.add("open");
+    }
+  };
+
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", handleAccordion);
+  });
+</script>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const faqTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".faq",
+      start: "top 50%",
+    },
+  });
+
+  faqTL
+    .from("section.faq", { x: -300, opacity: 0, duration: 1 })
+    .from(
+      ".faq .section-contents",
+      { x: 300, opacity: 0, duration: 1 },
+      "-=.7"
+    );
+
+  const adTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".ad",
+      start: "top 70%",
+      // markers: true,
+    },
+  });
+
+  adTL.from(".ad .inner-section", { y: 500, opacity: 0, duration: 1 });
+</script>
+
+<style>
+  section {
+    margin: 0 auto;
+    padding: 112px 64px;
+  }
+  section.gray {
+    background-color: #f7f7f7;
+  }
+  section.faq {
+    .section-header,
+    .section-contents {
+      width: 768px;
+      margin: 0 auto;
+    }
+  }
+  .section-header {
+    text-align: center;
+    h2 {
+      font-size: 48px;
+    }
+    p {
+      margin-top: 24px;
+      font-size: 18px;
+    }
+    margin-bottom: 80px;
+  }
+  .faq-accordion {
+    margin-top: 60px;
+    li + li {
+      margin-top: 16px;
+    }
+    .accordion-header {
+      border: 1px solid #000;
+      padding: 20px 24px;
+      font-size: 18px;
+      button {
+        text-align: left;
+        display: inline-block;
+        width: 100%;
+        color: #000;
+        background: url("../assets/index-faq/icon-plus.svg") no-repeat right
+          center;
+      }
+    }
+    .accordion-header.open {
+      button {
+        background-image: url("../assets/index-faq/icon-minus.png");
+      }
+    }
+    .accordion-detail {
+      overflow: hidden;
+      border: 1px solid #000;
+      border-top: 0;
+      margin-top: -1px;
+      max-height: 0;
+      padding-right: 24px;
+      padding-left: 24px;
+      transition: max-height 0.5s ease-in-out;
+      div {
+        line-height: 1.5;
+      }
+    }
+    .accordion-detail::before,
+    .accordion-detail::after {
+      content: "";
+      display: block;
+      padding: 10px;
+    }
+  }
+  .additional-box {
+    text-align: center;
+    margin-top: 72px;
+    p {
+      font-size: 18px;
+    }
+    .additional-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+  }
+  .ad {
+    .inner-section {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+    text-align: center;
+    strong {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 48px;
+    }
+    h2 + p {
+      margin: 40px 0;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+  .link-button {
+    padding: 12px 24px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 24px;
+    color: #000;
+    transition: all 0.3s ease-in;
+  }
+  .link-button:hover {
+    background-color: black;
+    color: white;
+  }
+  .buttons-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .link-button {
+      margin-top: 0;
+    }
+    .link-text {
+      position: relative;
+      color: #000;
+      padding-right: 15px;
+      background: url("../assets/index-faq/icon-arrow.svg") no-repeat right
+        center;
+    }
+    .link-text::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: black;
+      transition: all 0.3s ease;
+    }
+
+    .link-text:hover::before {
+      left: 0;
+      width: 85%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    section {
+      padding: 48px 24px;
+    }
+    .section-header {
+      text-align: left;
+    }
+    section.faq {
+      .section-header,
+      .section-contents {
+        width: 100%;
+      }
+    }
+    section.gray {
+      display: none;
+    }
+    .link-button {
+      width: 100%;
+    }
+  }
+</style>

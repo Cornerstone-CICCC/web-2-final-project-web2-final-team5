@@ -1,0 +1,343 @@
+---
+import "@splidejs/splide/css";
+import CustomerLogo from "../assets/servicesPage/img-customer-logo.png";
+import Avatar1 from "../assets/servicesPage/img-avatar1.png";
+import Avatar2 from "../assets/servicesPage/img-avatar2.png";
+import Avatar3 from "../assets/servicesPage/img-avatar3.png";
+---
+
+<section class="services customer">
+  <div class="section-header">
+    <h2>Customer testimonials</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="section-contents">
+    <!-- slider -->
+    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar1.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar2.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar3.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"
+                  ><img src={CustomerLogo.src} alt="" /></span
+                >
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar2.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar3.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="card">
+              <div class="logo">
+                <img src={CustomerLogo.src} alt="" />
+              </div>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare."
+              </p>
+              <div class="user">
+                <span class="user-photo"><img src={Avatar1.src} alt="" /></span>
+                <div class="user-info">
+                  <span class="name">Name Surname</span>
+                  <span>Position, Company Name</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- //slider -->
+  </div>
+</section>
+
+<style>
+  section.customer {
+    padding: 112px 30px;
+    background-color: #f7f7f7;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    h2 {
+      font-size: 48px;
+      line-height: 57px;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+  .card {
+    border: 1px solid #000;
+    margin: 16px;
+    padding: 32px;
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 24px 0;
+      font-weight: 300;
+    }
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .user-photo {
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      overflow: hidden;
+      display: inline-block;
+      flex: none;
+      img {
+        width: 100%;
+      }
+    }
+    .user-info {
+      font-size: 16px;
+      font-weight: 300;
+      .name {
+        font-weight: 500;
+        display: block;
+        padding-bottom: 6px;
+      }
+    }
+  }
+
+  /* slider */
+  .section-contents {
+    padding-bottom: 50px;
+    .splide__pagination {
+      bottom: -50px;
+    }
+    .splide__arrow {
+      width: 48px;
+      height: 48px;
+      opacity: 1;
+      border: 1px solid #000;
+      background: #fff url("../assets/servicesPage/icon-arrow.svg") no-repeat
+        center;
+    }
+    .splide__arrow--prev {
+      left: -8px;
+    }
+    .splide__arrow--next {
+      transform: rotate(180deg) translateY(24px);
+      right: -8px;
+    }
+    .splide__arrow svg {
+      display: none;
+    }
+    .splide__arrow:disabled {
+      border-color: #8d8d8d;
+      opacity: 0.5;
+      cursor: default;
+    }
+    .splide__pagination__page {
+      background-color: #8d8d8d;
+    }
+    .splide__pagination__page.is-active {
+      background-color: #000;
+      transform: scale(1);
+    }
+  }
+  @media (max-width: 768px) {
+    section.customer {
+      background-color: #fff;
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+    .section-header {
+      text-align: left;
+      margin-bottom: 48px;
+      h2 {
+        font-size: 32px;
+        line-height: 1.3;
+      }
+    }
+    .section-contents {
+      padding-bottom: 48px;
+      .card {
+        margin: 0;
+      }
+      .splide__arrows {
+        position: absolute;
+        bottom: -70px;
+        right: 0;
+      }
+      .splide__arrow--next {
+        right: 0;
+      }
+      .splide__arrow--prev {
+        left: initial;
+        right: 60px;
+      }
+      .splide__arrow:disabled {
+        opacity: 0.3;
+      }
+      .splide__pagination {
+        justify-content: flex-start;
+        padding-left: 0;
+        bottom: -78px;
+      }
+      .splide__pagination__page.is-active {
+        background-color: #000;
+        transform: scale(1);
+      }
+    }
+  }
+</style>
+
+<script>
+  // Splide
+  import Splide from "@splidejs/splide";
+  document.addEventListener("DOMContentLoaded", function () {
+    new Splide("#image-carousel", {
+      perPage: 3,
+      breakpoints: {
+        768: {
+          perPage: 1,
+        },
+      },
+    }).mount();
+  });
+</script>
+
+<script>
+  // GSAP
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".customer .section-header", {
+    scrollTrigger: {
+      trigger: ".customer",
+      // markers: true,
+      start: "top 60%",
+    },
+    y: -50,
+    opacity: 0,
+    duration: 1,
+  });
+
+  gsap.from(".customer .section-contents li", {
+    scrollTrigger: {
+      trigger: ".customer .section-contents",
+      // markers: true,
+      start: "top 70%",
+    },
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+  });
+</script>

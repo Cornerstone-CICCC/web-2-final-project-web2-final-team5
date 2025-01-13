@@ -1,0 +1,149 @@
+---
+import Team1 from "../assets/team-images/our-team-1.png"
+import Team2 from "../assets/team-images/our-team-2.png"
+import Team3 from "../assets/team-images/our-team-3.png"
+import Linkedin from "../assets/team-images/our-team-linkedin.svg"
+import Twitter from "../assets/team-images/our-team-twitter.svg"
+import Dribble from "../assets/team-images/dribble-icon.svg"
+---
+<section class="our-team">
+    <div class="first-box">
+        <h5>Tagline</h5>
+        <h2>Our team</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    </div>
+    <div class="second-box">
+        <div class="profile first">
+            <img src={Team1.src} alt="person1" class="person">
+            <h6>Full name</h6>
+            <p class="job-title">Job title</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+            <div class="socials">
+                <a href="#"><img src={Linkedin.src} alt="linkedin" class="icon"></a>
+                <a href="#"><img src={Twitter.src} alt="twitter" class="icon"></a>
+                <a href="#"><img src={Dribble.src} alt="dribble" class="icon"></a>
+            </div>
+        </div>
+        <div class="profile second">
+            <img src={Team2.src} alt="person2" class="person">
+            <h6>Full name</h6>
+            <p class="job-title">Job title</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+            <div class="socials">
+                <a href="#"><img src={Linkedin.src} alt="linkedin" class="icon"></a>
+                <a href="#"><img src={Twitter.src} alt="twitter" class="icon"></a>
+                <a href="#"><img src={Dribble.src} alt="dribble" class="icon"></a>
+            </div>
+        </div>
+        <div class="profile third">
+            <img src={Team3.src} alt="person3" class="person">
+            <h6>Full name</h6>
+            <p class="job-title">Job title</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+            <div class="socials">
+                <a href="#"><img src={Linkedin.src} alt="linkedin" class="icon"></a>
+                <a href="#"><img src={Twitter.src} alt="twitter" class="icon"></a>
+                <a href="#"><img src={Dribble.src} alt="dribble" class="icon"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .our-team {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .first-box {
+        text-align: center;
+        margin: 5vw 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    h2 {
+        margin: 1rem 0;
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    .second-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 2rem auto;
+        gap: 3vw;
+        width: 90vw;
+    }
+
+    .profile {
+        text-align: center;
+    }
+
+    .person {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    h6 {
+        margin: 1rem 0 0.5rem 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .job-title {
+        font-size: 18px;
+    }
+
+    .description {
+        margin: 1rem 0 2rem 0;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .icon {
+        width: 18px;
+    }
+
+    @media screen and (max-width:769px) {
+        .our-team {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    import {gsap} from 'gsap';
+    import {ScrollTrigger} from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const firstLine = document.querySelector(".first-box h5")
+    const secondLine = document.querySelector(".first-box h2")
+    const thirdLine = document.querySelector(".first-box p")
+    const profile1 = document.querySelector(".first")
+    const profile2 = document.querySelector(".second")
+    const profile3 = document.querySelector(".third")
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".our-team",
+            start: "top-=200px top",
+            end: "bottom bottom",
+        }
+    })
+    tl.from(firstLine, {y: -100, opacity: 0, duration: 0.8})
+    tl.from(secondLine, {y: -100, opacity: 0, duration: 0.8}, "<")
+    tl.from(thirdLine, {y: -100, opacity: 0, duration: 0.8}, "<")
+    tl.from(profile1, {x: "130vw", duration: 0.8, ease: "power4.easeOut"}, "-=0.5")
+    tl.from(profile2, {x: "130vw", duration: 0.8, ease: "power4.easeOut"},"-=0.7")
+    tl.from(profile3, {x: "130vw", duration: 0.8, ease: "power4.easeOut"}, "-=0.7")
+</script>

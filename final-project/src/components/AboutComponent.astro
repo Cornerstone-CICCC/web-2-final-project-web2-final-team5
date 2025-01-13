@@ -10,44 +10,46 @@ import "../styles/about-modal.css"
 <section class="about-section">
   <div class="top-half">
     <div class="left">
-      <div class="heading-container">
-        <h2>About Us</h2>
-      </div>
-      <div class="small-headings">
-        <div class="mission">
-          <h4>Our Mission</h4>
-          <p>
-            At Ddsgnr Auto Repair, our mission is to provide our customers with
-            the highest level of car care and customer service.
-          </p>
+      <div class="top-left">
+        <div class="heading-container top-animation">
+          <h2>About Us</h2>
         </div>
-        <div class="expertise">
-          <h4>Our Expertise</h4>
-          <p>
-            At Ddsgnr Auto Repair, our technicians are the heart and soul of our
-            business. With years of experience and training,
-          </p>
+        <div class="small-headings top-animation">
+          <div class="mission">
+            <h4>Our Mission</h4>
+            <p>
+              At Ddsgnr Auto Repair, our mission is to provide our customers with
+              the highest level of car care and customer service.
+            </p>
+          </div>
+          <div class="expertise">
+            <h4>Our Expertise</h4>
+            <p>
+              At Ddsgnr Auto Repair, our technicians are the heart and soul of our
+              business. With years of experience and training,
+            </p>
+          </div>
+          <div class="equipment">
+            <h4>Our Equipment</h4>
+            <p>
+              At Ddsgnr Auto Repair, our technicians are the heart and soul of our
+              business. With years of experience and training,
+            </p>
+          </div>
+          <div class="customer-promise">
+            <h4>Our Customer Promise</h4>
+            <p>
+              At Ddsgnr Auto Repair, our mission is to provide our customers with
+              the highest level of car care and customer service.
+            </p>
+          </div>
         </div>
-        <div class="equipment">
-          <h4>Our Equipment</h4>
-          <p>
-            At Ddsgnr Auto Repair, our technicians are the heart and soul of our
-            business. With years of experience and training,
-          </p>
+        <div class="book-container top-animation">
+          <button class="book-button">Book Your Appointment Now</button>
+          <a href="#" class="learn-more">
+            Learn more <span class="arrow"><img src={Arrow.src} alt="arrow" /></span>
+          </a>
         </div>
-        <div class="customer-promise">
-          <h4>Our Customer Promise</h4>
-          <p>
-            At Ddsgnr Auto Repair, our mission is to provide our customers with
-            the highest level of car care and customer service.
-          </p>
-        </div>
-      </div>
-      <div class="book-container">
-        <button class="book-button">Book Your Appointment Now</button>
-        <a href="#" class="learn-more">
-          Learn more <span class="arrow"><img src={Arrow.src} alt="arrow" /></span>
-        </a>
       </div>
     </div>
     <div class="right video-box">
@@ -119,6 +121,11 @@ import "../styles/about-modal.css"
     align-items: center;
   }
 
+  .top-left {
+    display: flex;
+    flex-direction: column;
+  }
+
   .right {
     width: 100%;
     display: flex;
@@ -143,6 +150,7 @@ import "../styles/about-modal.css"
     column-gap: 2vw;
     row-gap: 4vw;
     margin-top: 1vw;
+    width: 100%;
   }
 
   h4 {
@@ -211,7 +219,7 @@ import "../styles/about-modal.css"
     width: 550px;
   }
 
-  p {
+  .about-section p {
     line-height: 1.5;
   }
 
@@ -236,6 +244,10 @@ import "../styles/about-modal.css"
   }
 
   @media screen and (max-width: 769px) {
+    .about-section {
+      margin-top: 5rem;
+    }
+    
     .top-half {
       flex-direction: column;
       height: 100%;
@@ -253,6 +265,11 @@ import "../styles/about-modal.css"
 
     .small-headings {
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      margin-top: 1rem;
+    }
+
+    .book-container {
+      margin-top: 2rem;
     }
 
     video {
@@ -306,16 +323,30 @@ import "../styles/about-modal.css"
 
   gsap.registerPlugin(ScrollTrigger)
 
+<<<<<<< HEAD
   
+=======
+  const topAnimation = document.querySelectorAll(".top-animation")
+  const video = document.querySelector(".video-box")
 
-  const bottomHalf = document.querySelector(".bottom-half")
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".about-section",
+      start: "top-=250px top",
+      end: "bottom bottom", 
+    }
+  })
+  tl.from(topAnimation, {y: -30, opacity: 0, duration: 0.9, stagger: 0.3, delay: 0.2})
+  tl.from(video, {x: "70vw", duration: 0.8, ease: "power4.easeOut"}, "-=0.9")
+>>>>>>> fc7107d0bce2a8f7cdf3eaa3474d957db62c97f0
+
   const bottomImage = document.querySelector(".bottom-half .left")
   const ourMission = document.querySelector(".bottom-half .right")
 
   const tl2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".bottom-half",
-      start: "top-=180px top",
+      start: "top-=260px top",
       end: "bottom bottom",
     }
   })
